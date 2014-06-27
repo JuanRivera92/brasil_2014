@@ -1,0 +1,92 @@
+<html>
+
+	<head>
+		<title>Pagina Web Mundial Brasil 2014</title>
+		<link href="css\estilos.css" rel="stylesheet" type="text/css"/>
+	</head>
+	
+	<body background="images\fondo.jpg" style='background-repeat:no-repeat;'  >
+		<table border="1" align="center" class="menu">
+			<tr>
+				<th><a href="lista_equipos(Rivera).html"> Lista de Equipos </a></th>
+				<th><a href="calendario_resultados(Rivera).html"> Calendarios y Resultados </a></th>
+				<th><a href="tabla_de_grupos(Rivera).html"> Tabla de Grupos </a></th>
+			</tr>
+			<br/>
+			<tr>
+				<th><a href="goleo_individual(Rivera).html"> Goleo Individual </a></th>
+				<th><a href="goleo_por_equipo.html"> Goleo por Equipos </a></th>
+				<th><a href="estadisticas(Rivera).html"> Estadisticas </a></th>
+			</tr>
+			<tr><th colspan="3"><a href="noticias.html"> Noticias </a></th></tr>
+			<tr><th colspan="3"><a href="captura_resultados(Rivera).html"> Captura resultados </a></th></tr>
+			<tr><th colspan="3"><a href="Registrar_equipo(Rivera).html"> Registro de Equipos </a></th></tr>
+			<tr><th colspan="3"><a href="Registrar_jugador(Rivera).html"> Registro de Jugadores </a></th></tr>
+		</table>
+		<br/><br/>
+			<div align="center" >
+			<img width="55%" height="55%" src="images/Encabezado-Brasil-2014.jpg"/>
+			
+			<form method="POST" action="">
+			<br/>
+			<h1 align="center">REGISTRO DE EQUIPOS</h1>
+			<br/>
+				<label for="id_nombre_equipo">Nombre del equipo</label>
+				<input type="text" id= "id_nombre_equipo" name="id_nombre_equipo" required/>
+			<br/>	
+				<label for="id_escudo_equipo">Escudo</label>
+				<select>
+					<option value="Argelia">Argelia</option>
+				</select>
+			<br/>
+				<label for="id_pais_equipo">Pais</label>
+					<select name="pais">
+						<option value="Argelia" > Argelia </option>
+						<option value="Camerun"> Camerun </option>
+						<option value="Costa de Marfil"> Costa de Marfil </option>
+						<option value="Ghana"> Ghana </option>
+						<option value="Nigeria"> Nigeria </option>
+						<option value="Australia"> Audtralia </option>
+						<option value="Iran"> Iran </option>
+						<option value="Japon"> Japon </option>
+						<option value="Corea del Sur"> Corea del Sur </option>
+						<option value="EE.UU"> EE.UU </option>
+						<option value="Honduras"> Honduras </option>
+						<option value="Mexico"> Mexico </option>
+						<option value="Argentina"> Argentina </option>
+						<option value="Brasil"> Brasil </option>
+						<option value="Chile"> Chile </option>
+						<option value="Colombia"> Colombia </option>
+						<option value="Ecuador"> Ecuador</option>
+						<option value="Uruguay"> Uruguay </option>
+						<option value="Alemania"> Alemania </option>
+						<option value="Belgica"> Belgica </option>
+						<option value="Bisnoa"> Bisnoa </option>
+						<option value="Croacia"> Croacia </option>
+						<option value="España"> España </option>
+						<option value="Francia"> Francia </option>
+						<option value="Gracia"> Gracia </option>
+						<option value="Inglaterra"> Inglaterra </option>
+						<option value="Italia"> Italia </option>
+						<option value="Holanda"> Holanda </option>	
+					</select>
+			<br/>
+					<label for="id_continente_equipo">Continente</label>
+					<select name="pais">
+						<option value="Africa"> Africa </option>
+						<option value="Asia"> Asia </option>
+						<option value="Sudemerica"> Sudemerica </option>
+						<option value="Norte, CentroAmerica y Caribe"> Norte, CentroAmerica y Caribe </option>
+						<option value="Europa"> Europa </option>
+					</select>
+			<br/>
+				<label for="foto_uniforme_equipo">Uniforme</label>
+				<input type="file" id= "foto_uniforme_equipo" name="foto_uniforme_equipo">
+			<br/>
+				<input type="submit" value="Guardar">			
+			</form>
+			
+			</div>
+	</body>
+	
+</html>

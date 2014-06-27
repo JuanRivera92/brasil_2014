@@ -1,0 +1,45 @@
+table th {
+	background-color:#93928A;
+/*	color:#000000;  */
+	font-family:Arial;
+	font-size:14pt;
+}
+/*Alternacion de colores en la tabla
+*/
+
+.renglon_verde_alto {
+	background-color:#146A2D;
+	color:#FFFFFF;
+	font-family:Arial;
+	font-size:10pt;
+	text-align:center;
+}
+
+.renglon_verde_bajo {
+	background-color:#30A646;
+	color:#FFFFFF;
+	font-family:Arial;
+	font-size:10pt;
+	text-align:center;
+}
+
+/*estilo solo para el menu
+*/
+
+.menu {
+	border:1px solid #000000;
+	background-color:#A9C42E;
+}
+
+.menu th {
+	border:1px solid #000000;
+	background-color:#A9C42E;
+	padding:3px;
+}
+
+.menu th a {
+	color:#FFF25A;
+	font-family:Verdana;
+	font-size:16pt;
+	text-align:center;
+}
