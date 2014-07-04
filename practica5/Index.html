@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script src="js/jquery.min.js"></script>
+		<script>
+			$(document).ready(
+				function(){
+				alert($('#elemento1').css('fontSize'));
+				$('#elemento1').css('fontSize', '100px'); <!--Seleccioname el "elemento"-->
+				alert($('#elemento').css('fontSize', '100x'));
+				$('#elemento1').hide('slow'); <!--desaparece lento-->
+				$('#elemento1').show('slow'); 
+				$('#elemento1').click(
+					function(){
+					$(this).hide('slow');	
+				}
+					);
+				$('#elemento1').show('slow');
+				$('h1').css({ 'color' : 'blue' });	
+				$('h1').width('1px');
+				$('#boton').click(
+					function(){
+					alert($('#input1').val());
+					}
+					);	
+				}
+			);
+		</script>
+	</head>
+	<input type="text" id="input1">
+	<button id="boton">Aceptar</button>
+	<body>
+	
+			<input name="n1" type="text" id="n1" size="4" maxlength="5" />
+
+			<input name="n1" type="text" id="n2" size="4" maxlength="5" />
+
+			<input name="suma" type="button" onclick="valor()" value="suma" />
+	
+	
+		<div id="container" class="elemento2">
+			<h1 id="titulo">
+				<p class="parrafo" id="elemento1"> TEXTO DEL PARRAFO </p>
+			</h1>
+		</div>
+		<div>
+			<h1 class="titulo">
+				<p class="parrafo" id="elemento1"> TEXTO DEL PARRAFO </p>
+			</h1>
+			<h2>
+				<p class="parrafo" id="elemento1"> TEXTO DEL PARRAFO </p>
+			</h2>
+		</div>
+	</body>
+</html>
