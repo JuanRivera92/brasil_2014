@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.js"></script>	
+
+			<script>
+				$(document).ready(
+				function(){
+					$('.elemento1').hide('fast');
+					$('.elemento2').hide('fats');
+					$('.elemento3').hide('fats');
+					$('.elemento4').hide('fats');
+					$('#boton').click(
+						function(){
+						$('.elemento1').show('fats');	
+						$('.elemento2').show('fats');	
+							}
+							);
+						$('#boton2').click(
+						function(){
+						$('.elemento3').show('fats');		
+							}
+							);
+							$('#boton3').click(
+						function(){
+						$('.elemento4').show('fats');		
+							}
+							);
+				}
+				);	
+			</script>					
+	</head>
+	
+	<body>
+			<div class="row">
+				<div class="col-md-12">
+					<nav class="navbar navbar-inverse" role="navigation">
+					  <div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+						  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						  </button>
+						  <a class="navbar-brand" href="#">Examne</a>
+						</div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+						  <form class="navbar-form navbar-left" role="search">
+							<div class="form-group">
+							  <input type="text" class="form-control" placeholder="Email">
+							</div>
+							<div class="form-group">
+							  <input type="text" class="form-control" placeholder="Password">
+							</div>
+							<button type="button" class="btn btn-primary navbar-btn">Sign in</button>
+						  </form>
+						</ul>
+						</div><!-- /.navbar-collapse -->
+					  </div><!-- /.container-fluid -->
+					</nav>
+				</div>
+			</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<div class="jumbotron">
+				  <h2>Examen 2, 05 de Julio de 2014</h2>
+				  <p>TEXTO</p>
+				  <p><button id="boton" class="btn btn-primary">Mostrar Formularios</button></p>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid" >
+			<div class="row" >
+				<div class="col-md-4" >
+					<h3 align="center">Equipo</h3>
+					<div id="container" class="elemento1" >
+						<h1 id="titulo">
+							Informacion
+						</h1>
+						<form>
+							<div >
+								<label for="Nombre">Nombre: </label>
+								<input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="">
+							</div>
+							<div>
+								<label for="bandera">Bandera: </label>
+								<input type="file" id="bandera" name="bandera">
+							</div>
+						</form>	
+						
+					</div>
+				</div>
+				<div class="col-md-4" class="elemento2">
+					<h3 align="center">Integrante</h3>
+					<div id="container" class="elemento2">
+						<form>
+							<div>
+								<label for="nombre">Nombre: </label>
+								<input type="text" class="form-control" id="nombre" name="nombre" placeholder="">
+							</div>
+							<div>
+								<label for="apellido">Apellido: </label>
+								<input type="text" class="form-control" id="apellido" name="apellido" placeholder="">
+							</div>
+							<div>
+								<label for="peso">Peso: </label>
+								<input type="text" class="form-control" id="peso" name="peso" placeholder="">
+							</div>
+							<div>
+								<label for="estatura">Estatura: </label>
+								<input type="text" class="form-control" id="estatura" name="estatura" placeholder="">
+							</div>
+							<div>
+								<label for="foto">Foto: </label>
+								<input type="file" id="foto" name="foto">
+							</div>
+							<div>
+								<label for="edad">Edad: </label>
+								<input type="text" class="form-control" id="edad" name="edad" placeholder="">
+							</div>
+							<div>
+							<button id="boton2" class="btn btn-default">Entrenador</button>
+							</div>
+							<div>
+							<button id="boton3" class="btn btn-default">Jugador</button>
+							</div>
+						</form>	
+					</div>
+				</div>
+				<div class="col-md-4">
+					<h3 align="center">Tipo de Integrante</h3>
+					<div id="container" class="elemento3" >
+						<form>
+							<div >
+								<label for="numero">Numero: </label>
+								<input type="text" class="form-control" id="numero" name="numero" placeholder="">
+							</div>
+						</form>	
+						
+					</div>
+					<div id="container" class="elemento4" >
+						<form>
+							<div >
+								<label for="nombre">Nombre: </label>
+								<input type="text" class="form-control" id="nombre" name="nombre" placeholder="">
+							</div>
+						</form>	
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

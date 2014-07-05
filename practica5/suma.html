@@ -6,23 +6,55 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<script src="js/jquery.min.js"></script>
-			<script>
-			$(document).ready(
-				function()(
-				{
-					var n1= $("#n1").value();
-					var n2= $("#n2").value();
-					var resultado= (parseint(n1)+parseint(n2));
-					alert(resultado);        
-
-				}
-				);
-				);
+		<script src="js/bootstrap.js"></script>
+		
+		
+			<script Language="JavaScript">
+				$(document).ready(
+				function(){
+				var n1 = ('$#boton').val();
+				
+				var valor1;
+				var valor2;
+				valor1=prompt('Ingresar el primer valor:', '');
+				valor1=prompt('Ingresar el segundo valor:', '')
+				var suma=parseInt(valor1)+parseInt(valor2);
+				document.write(suma);
+						}
+					);
 			</script>
+			
 	</head>
 	<body>
+	
 		<input name="n1" type="text" id="n1" size="4" maxlength="5" />
-		<input name="n1" type="text" id="n2" size="4" maxlength="5" />
-		<input name="suma" type="button" value="suma" />
+		<input name="n2" type="text" id="n2" size="4" maxlength="5" />
+		<button id="boton1">Resultado 1</button>
+		<button id="boton2">Resultado 2</button>
+	
+	
+		
+		<!-- Button trigger modal -->
+			<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+			  Informacion
+			</button>
+
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+
+					<h4 class="modal-title" id="myModalLabel">Examen 2</h4>
+				  </div>
+				  <div class="modal-body">
+					Esto es programacion WEB!! 10030944
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
 	</body>
 </html>
