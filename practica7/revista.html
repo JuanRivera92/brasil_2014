@@ -4,110 +4,243 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Ejemplo de Bootstrap Rivera</title>
+		<title>Revista</title>
 
 		<!-- Bootstrap -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="css/bootstrap.css"/>
-		<link rel="stylesheet" href="css/bootstrapValidator.min.css"/>
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/bootstrapValidator.min.css"/>
 
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/js/bootstrap.min.js"></script>
-		<!--Either use the compressed version (recommended in the production site)-->
-		<script type="text/javascript" src="/path/to/dist/js/bootstrapValidator.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!--Either use the compressed version (recommended in the production site)-->
+    <script type="text/javascript" src="js/bootstrapValidator.min.js"></script>
+
+    <!--Or use the original one with all validators included-->
+    <script type="text/javascript" src="js/bootstrapValidator.js"></script>
 
 	</head>
-	
     <body>
-		<div>
-			<form id="form1">
-				<label for="nombre">Nombre: </label>
-				<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Por ejemplo: H para hombres">
-			</form>
+	<link rel="stylesheet" type="text/css" media="screen" href="content/bootstrap-datapicker.css">
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6" class="constrain">
+					<form id="formulario1">
+						<div class="form-group">
+							<label for="nombre">Nombre</label>
+							<input type="text" class="form-control" id="nombre" name="nombre" />
+						</div>
+						<div>
+							<label for="portada">Portada: </label>
+							<input type="file" id="portada" name="portada">
+						</div>
+						<br/>
+						<div class='input-group date' id='datetimepicker1'>
+							<input type='text' class="form-control" />
+							<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+							</span>
+						</div>
+						<div class="form-group">
+							<label for="volumen">Volumen</label>
+							<input type="text" class="form-control" id="volumen" name="volumen" />
+						</div>
+						<div class="form-group">
+							<label for="titulo">Titulo</label>
+							<input type="text" class="form-control" id="titulo" name="titulo" />
+						</div>
+						<div class="form-group">
+							<label for="subtitulo">Subtitulo</label>
+							<input type="text" class="form-control" id="subtitulo" name="subtitulo" />
+						</div>
+						<div class="form-group">
+							<label for="numero">Numero</label>
+							<input type="text" class="form-control" id="numero" name="numero" />
+						</div>
+						<div class="form-group">
+							<label for="clave">Clave</label>
+							<input type="text" class="form-control" id="clave" name="clave" />
+						</div>
+						<div class="form-group">
+							<label for="directorio">Directorio</label>
+							<textarea type="text" class="form-control" id="directorio" name="directorio"></textarea>
+						</div>
+						<div class="form-group">
+							<label for="editorial">Editorial</label>
+							<textarea type="text" class="form-control" id="editorial" name="editorial"></textarea>
+						</div>
+					</form>
+				
+				
+					
+				</div>
+			</div>
 		</div>
-		<div>
-			<label for="portada">Portada: </label>
-			<input type="file" id="portada" name="portada">
-		</div>
-		<div>
-			Calendario
-		</div>
-		<div>
-			<label for="volumen">Volumen: </label>
-			<input type="text" class="form-control" id="volumen" name="volumen" >
-		</div>
-		<div>
-			<label for="titulo">Titulo: </label>
-			<input type="text" class="form-control" id="titulo" name="titulo" >
-		</div>
-		<div>
-			<label for="subtitulo">Subtitulo: </label>
-			<input type="text" class="form-control" id="subtitulo" name="subtitulo" >
-		</div>
-		<div>
-			<label for="numero">Numero: </label>
-			<input type="text" class="form-control" id="numero" name="numero" >
-		</div>
-		<div>
-			<label for="clave">Clave: </label>
-			<input type="text" class="form-control" id="clave" name="clave" >
-		</div>
-		<div>
-			<label for="directorio">Directorio: </label>
-			<textarea class="form-control" id="directorio" name="directorio"></textarea>
-		</div>
-		<div>
-			<label for="editorial">Editorial: </label>
-			<textarea class="form-control" id="editorial" name="editorial"></textarea>
-		</div>
-		<div>
-			<label for="status">Status: </label>
-			<input type="text" class="form-control" id="status" name="status" >
-		</div>
-		    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-			<script type="text/javascript" src="js/bootstrap.min.js"></script>
-			<script type="text/javascript" src="js/moment.js"></script>
-			<script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
-			<script type="text/javascript" src="js/bootstrap-datetimepicker.es.js"></script>
-			<script type="text/javascript" src="js/bootstrapValidator.min.js"></script>
-			<!-- Include all compiled plugins (below), or include individual files as needed -->
-			<script src="js/bootstrap.min.js"></script>
-			<script type="text/javascript"/>
-			
-		<script>
-						$(function () {
-				$('#form1').bootstrapValidator({
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/moment.js"></script>
+		<script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+		<script type="text/javascript" src="js/bootstrap-datetimepicker.es.js"></script>
+		<script type="text/javascript" src="js/bootstrapValidator.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$(function () {
+					$('#datetimepicker1').datetimepicker({
+						language: 'es'
+					});
+				});
+			$('#formulario1').bootstrapValidator({
+				message: 'Este valor no es válido',
+				feedbackIcons: {
+					valid: 'glyphicon glyphicon-ok',
+					invalid: 'glyphicon glyphicon-remove',
+					validating: 'glyphicon glyphicon-refresh'
+				},
 				fields: {
 					nombre: {
-						message: 'The nombre is not valid',
+						message: 'El nombre de la revista no es válido',
 						validators: {
 							notEmpty: {
-								message: 'The nombre is required and cannot be empty'
+								message: 'Es necesario el nombre de usuario y no puede estar vacío'
 							},
 							stringLength: {
 								min: 6,
 								max: 30,
-								message: 'The nombre must be more than 6 and less than 30 characters long'
+								message: 'El nombre de usuario debe ser mayor de 6 y menos de 30 caracteres de largo'
 							},
 							regexp: {
 								regexp: /^[a-zA-Z0-9_]+$/,
-								message: 'The username can only consist of alphabetical, number and underscore'
+								message: 'El nombre de usuario sólo puede consistir en alfabético, número y subrayado'
 							}
 						}
 					},
-					email: {
+					volumen: {
+						message: 'El nombre del volumen no es válido',
 						validators: {
 							notEmpty: {
-								message: 'The email is required and cannot be empty'
+								message: 'Es necesario el nombre del volumen y no puede estar vacío'
 							},
-							emailAddress: {
-								message: 'The input is not a valid email address'
+							stringLength: {
+								min: 6,
+								max: 30,
+								message: 'El nombre del volumen debe ser mayor de 6 y menos de 30 caracteres de largo'
+							},
+							regexp: {
+								regexp: /^[a-zA-Z0-9_]+$/,
+								message: 'El nombre del volumen sólo puede consistir en alfabético, número y subrayado'
 							}
 						}
-					}
+					},
+					titulo: {
+						message: 'El nombre del titulo no es válido',
+						validators: {
+							notEmpty: {
+								message: 'Es necesario el nombre del titulo y no puede estar vacío'
+							},
+							stringLength: {
+								min: 6,
+								max: 30,
+								message: 'El nombre del titulo debe ser mayor de 6 y menos de 30 caracteres de largo'
+							},
+							regexp: {
+								regexp: /^[a-zA-Z0-9_]+$/,
+								message: 'El nombre del titulo sólo puede consistir en alfabético, número y subrayado'
+							}
+						}
+					},
+					subtitulo: {
+						message: 'El nombre del subtitulo no es válido',
+						validators: {
+							notEmpty: {
+								message: 'Es necesario el nombre del subtitulo y no puede estar vacío'
+							},
+							stringLength: {
+								min: 6,
+								max: 30,
+								message: 'El nombre del subtitulo debe ser mayor de 6 y menos de 30 caracteres de largo'
+							},
+							regexp: {
+								regexp: /^[a-zA-Z0-9_]+$/,
+								message: 'El nombre del subtitulo sólo puede consistir en alfabético, número y subrayado'
+							}
+						}
+					},
+					numero: {
+						message: 'El nombre del numero no es válido',
+						validators: {
+							notEmpty: {
+								message: 'Es necesario el nombre del numero y no puede estar vacío'
+							},
+							stringLength: {
+								min: 6,
+								max: 30,
+								message: 'El nombre del numero debe ser mayor de 6 y menos de 30 caracteres de largo'
+							},
+							regexp: {
+								regexp: /^[0-9]+$/,
+								message: 'El nombre del numero sólo puede consistir en número'
+							}
+						}
+					},
+					clave: {
+						message: 'El nombre del subtitulo no es válido',
+						validators: {
+							notEmpty: {
+								message: 'Es necesario el nombre de la clave y no puede estar vacío'
+							},
+							stringLength: {
+								min: 6,
+								max: 30,
+								message: 'El nombre de la clave debe ser mayor de 6 y menos de 30 caracteres de largo'
+							},
+							regexp: {
+								regexp: /^[a-zA-Z0-9_]+$/,
+								message: 'El nombre de la clave sólo puede consistir en alfabético, número y subrayado'
+							}
+						}
+					},
+					directorio: {
+						message: 'El nombre del directorio no es válido',
+						validators: {
+							notEmpty: {
+								message: 'Es necesario el nombre del directorio y no puede estar vacío'
+							},
+							stringLength: {
+								min: 6,
+								max: 100,
+								message: 'El nombre del directorio debe ser mayor de 6 y menos de 100 caracteres de largo'
+							},
+							regexp: {
+								regexp: /^[a-zA-Z0-9_]+$/,
+								message: 'El nombre del directorio sólo puede consistir en alfabético, número y subrayado'
+							}
+						}
+					},
+					editorial: {
+						message: 'El nombre de la editorial no es válido',
+						validators: {
+							notEmpty: {
+								message: 'Es necesario el nombre de la editorial y no puede estar vacío'
+							},
+							stringLength: {
+								min: 6,
+								max: 100,
+								message: 'El nombre de la editorial debe ser mayor de 6 y menos de 100 caracteres de largo'
+							},
+							regexp: {
+								regexp: /^[a-zA-Z0-9_]+$/,
+								message: 'El nombre de la editorial sólo puede consistir en alfabético, número y subrayado'
+							}
+						}
+					},		
 				}
 			});
-		  });
-		  </script>
+		});
+		
+		</script>
+
 	</body>
 </html>  
