@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Ejemplo de Bootstrap Rivera</title>
+
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/bootstrap.css"/>
+		<link rel="stylesheet" href="css/bootstrapValidator.min.css"/>
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/js/bootstrap.min.js"></script>
+		<!--Either use the compressed version (recommended in the production site)-->
+		<script type="text/javascript" src="/path/to/dist/js/bootstrapValidator.min.js"></script>
+
+	</head>
+	
+    <body>
+		<div>
+			<form id="form1">
+				<label for="nombre">Nombre: </label>
+				<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Por ejemplo: H para hombres">
+			</form>
+		</div>
+		<div>
+			<label for="portada">Portada: </label>
+			<input type="file" id="portada" name="portada">
+		</div>
+		<div>
+			Calendario
+		</div>
+		<div>
+			<label for="volumen">Volumen: </label>
+			<input type="text" class="form-control" id="volumen" name="volumen" >
+		</div>
+		<div>
+			<label for="titulo">Titulo: </label>
+			<input type="text" class="form-control" id="titulo" name="titulo" >
+		</div>
+		<div>
+			<label for="subtitulo">Subtitulo: </label>
+			<input type="text" class="form-control" id="subtitulo" name="subtitulo" >
+		</div>
+		<div>
+			<label for="numero">Numero: </label>
+			<input type="text" class="form-control" id="numero" name="numero" >
+		</div>
+		<div>
+			<label for="clave">Clave: </label>
+			<input type="text" class="form-control" id="clave" name="clave" >
+		</div>
+		<div>
+			<label for="directorio">Directorio: </label>
+			<textarea class="form-control" id="directorio" name="directorio"></textarea>
+		</div>
+		<div>
+			<label for="editorial">Editorial: </label>
+			<textarea class="form-control" id="editorial" name="editorial"></textarea>
+		</div>
+		<div>
+			<label for="status">Status: </label>
+			<input type="text" class="form-control" id="status" name="status" >
+		</div>
+		    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+			<script type="text/javascript" src="js/bootstrap.min.js"></script>
+			<script type="text/javascript" src="js/moment.js"></script>
+			<script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+			<script type="text/javascript" src="js/bootstrap-datetimepicker.es.js"></script>
+			<script type="text/javascript" src="js/bootstrapValidator.min.js"></script>
+			<!-- Include all compiled plugins (below), or include individual files as needed -->
+			<script src="js/bootstrap.min.js"></script>
+			<script type="text/javascript"/>
+			
+		<script>
+						$(function () {
+				$('#form1').bootstrapValidator({
+				fields: {
+					nombre: {
+						message: 'The nombre is not valid',
+						validators: {
+							notEmpty: {
+								message: 'The nombre is required and cannot be empty'
+							},
+							stringLength: {
+								min: 6,
+								max: 30,
+								message: 'The nombre must be more than 6 and less than 30 characters long'
+							},
+							regexp: {
+								regexp: /^[a-zA-Z0-9_]+$/,
+								message: 'The username can only consist of alphabetical, number and underscore'
+							}
+						}
+					},
+					email: {
+						validators: {
+							notEmpty: {
+								message: 'The email is required and cannot be empty'
+							},
+							emailAddress: {
+								message: 'The input is not a valid email address'
+							}
+						}
+					}
+				}
+			});
+		  });
+		  </script>
+	</body>
+</html>  
