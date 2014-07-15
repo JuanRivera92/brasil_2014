@@ -1,5 +1,5 @@
 <?php 
-  define('BASEURL','http://localhost:8080/brasil_2014/proyecto1/');
+  define('BASEURL','http://localhost:8080/brasil_2014/examen3');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,13 +55,10 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="<?php echo BASEURL; ?>/views/site/inicio2.php">Inicio</a></li>
-            <li><a href="<?php echo BASEURL; ?>/views/ciudad/ciudad2.php">Ciudad</a></li>
-			<li><a href="<?php echo BASEURL; ?>/views/continente/continente2.php">Continente</a></li>
-			<li><a href="<?php echo BASEURL; ?>/views/estadio/estadio2.php">Estadio</a></li>
-			<li><a href="<?php echo BASEURL; ?>/views/pais/pais2.php">Pais</a></li>
-			<li><a href="<?php echo BASEURL; ?>/views/posicion/posicion2.php">Posicion</a></li>
-			<li><a href="<?php echo BASEURL; ?>/views/equipo/equipo2.php">Equipo</a></li>
-			<li><a href="<?php echo BASEURL; ?>/views/integrante/integrante2.php">Integrante</a></li>
+            <li><a href="<?php echo BASEURL; ?>/views/autor/autor.php">Autor</a></li>
+			<li><a href="<?php echo BASEURL; ?>/views/revista/revista.php">Revista</a></li>
+			<li><a href="<?php echo BASEURL; ?>/views/articulo/articulo.php">Articulo</a></li>
+			<li><a href="<?php echo BASEURL; ?>/views/status/status.php">Status</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">opciones  <b class="caret"></b></a>
               <ul class="dropdown-menu">
