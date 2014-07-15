@@ -8,11 +8,13 @@
     include ('../../controllers/PaisController.php');
     include ('../../libs/Er.php');
 	include ('../layouts/header.php');
-?>
-<br/>
-<br/>
-<br/>		
 	
+	if(isset($_POST['nombre'])){
+		$paisC = new PaisController();
+		$paisC->insertaPais($_POST);
+	}
+	
+?>
 			<div class="row">
 				<div class="col-md-6">
 					<form id="formulario3">

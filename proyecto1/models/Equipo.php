@@ -6,6 +6,7 @@ class Equipo extends Modelo{
     
     
     public $atributos = array(
+		'idequipo'=>array(),
         'nombre'=>array(),
         'idpais'=>array(),
 		'escudo'=>array(),
@@ -13,8 +14,9 @@ class Equipo extends Modelo{
     
     public $errores = array( );
     
+	private $idequipo;
     private $nombre;
-    private $id_pais;
+    private $idpais;
 	private $escudo;
        
     
@@ -31,15 +33,21 @@ class Equipo extends Modelo{
         return $rs;
     }
 	
-	//Inicio de nombre
-    public function get_nombre(){
-        $rs = array();
-        foreach ($this->nombre as $key => $value) {
-            $rs[$key]=$this->$key;
-        }
-        return $rs;
+	//Inicio de idequipo  
+    public function get_idequipo(){
+        return $this->idequipo;
     }
-    
+
+    public function set_idequipo($valor){
+        $er = new Er();
+        
+        if ( !$er->valida_idequipo($valor) ){
+            $this->errores[] = "Este id del pais (".$valor.") no es valido";
+        }
+            $this->idequipo = trim($valor);
+        }//Fin de idequipo
+	
+	//Inicio de nombre
     public function get_nombre(){
         return $this->nombre;
     } 
@@ -50,28 +58,13 @@ class Equipo extends Modelo{
         if ( !$er->valida_nombre($valor) ){
             $this->errores[] = "Este Nombre (".$valor.") no es valido";
         }
-
-        $rs = $this->consulta_sql("select * from usuarios where nombre = '$valor'");
-        $rows = $rs->GetArray();
-        
-        if(count($rows) > 0){
-            $this->errores[] = "Este e-mail (".$valor.") ya esta registrado"; 
-        }else{
             $this->nombre = trim($valor);
-        }
     }
 	//Fin de nombre
-	//Inicio de id_pais
-	public function get_idpais(){
-        $rs = array();
-        foreach ($this->idpais as $key => $value) {
-            $rs[$key]=$this->$key;
-        }
-        return $rs;
-    }
-    
+	
+	//Inicio de idpais    
     public function get_idpais(){
-        return $this->sube;
+        return $this->idpais;
     }
 
     public function set_idpais($valor){
@@ -80,28 +73,12 @@ class Equipo extends Modelo{
         if ( !$er->valida_idpais($valor) ){
             $this->errores[] = "Este id del pais (".$valor.") no es valido";
         }
-
-        $rs = $this->consulta_sql("select * from usuarios where nombre = '$valor'");
-        $rows = $rs->GetArray();
-        
-        if(count($rows) > 0){
-            $this->errores[] = "Este e-mail (".$valor.") ya esta registrado"; 
-        }else{
             $this->idpais = trim($valor);
-        }
-    }
-	//Fin de id_pais
+        }//Fin de idpais
+		
 	//Inicio escudo
-	public function get_escudo(){
-        $rs = array();
-        foreach ($this->escudo as $key => $value) {
-            $rs[$key]=$this->$key;
-        }
-        return $rs;
-    }
-    
-    public function get_id_pais(){
-        return $this->sube;
+    public function get_escudo(){
+        return $this->escudo;
     }
 
     public function set_escudo($valor){
@@ -110,17 +87,8 @@ class Equipo extends Modelo{
         if ( !$er->valida_escudo($valor) ){
             $this->errores[] = "Este id del escudo (".$valor.") no es valido";
         }
-
-        $rs = $this->consulta_sql("select * from usuarios where nombre = '$valor'");
-        $rows = $rs->GetArray();
-        
-        if(count($rows) > 0){
-            $this->errores[] = "Este e-mail (".$valor.") ya esta registrado"; 
-        }else{
             $this->escudo = trim($valor);
-        }
-    }
-	//Fin de escudo
+        }//Fin de escudo
 }//Fin de clase Equipo
 
 ?>

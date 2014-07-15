@@ -8,6 +8,11 @@
     include ('../../controllers/IntegranteController.php');
     include ('../../libs/Er.php');
 	include ('../layouts/header.php');
+	
+	if(isset($_POST['nombre'])){
+		$integranteC = new IntegranteController();
+		$integranteC->insertaEstadio($_POST);
+	}
 ?>
 		<div class="row">
 			<div class="col-md-12">
@@ -23,7 +28,7 @@
 				<div class="col-md-6" >
 					<h3 align="center">Integrante</h3>
 					<div id="container" class="elemento1">
-						<form>
+						<form action="" method="POST">
 							<div>
 								<label for="nombre">Nombre: </label>
 								<input type="text" class="form-control" id="nombre" name="nombre" placeholder="">
@@ -48,7 +53,7 @@
 								<label for="edad">Edad: </label>
 								<input type="text" class="form-control" id="edad" name="edad" placeholder="">
 							</div>
-
+							<br/>
 						</form>	
 						<div>
 							<button id="boton2" class="btn btn-default">Entrenador</button>
@@ -82,22 +87,4 @@
 				</div>
 			</div>
 		</div>	
-	<script type="text/javascript">
-	$(document).ready(function() {
-			$(".elemento1").hide("slow");
-			$(".elemento2").hide("slow");
-			$(".elemento3").hide("slow");
-			
-		$("#boton").click(function(){	
-			$(".elemento1").show("fats");	
-					});
-		$("#boton2").click(function(){
-			$(".elemento3").hide("fats");
-			$(".elemento2").show("fats");		
-					});
-		$("#boton3").click(function(){
-			$(".elemento3").show("fats");		
-					});
-			});
-	</script>	
 <?php include ('../layouts/footer.php'); ?>

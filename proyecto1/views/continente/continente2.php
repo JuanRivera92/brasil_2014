@@ -8,10 +8,13 @@
     include ('../../controllers/ContinenteController.php');
     include ('../../libs/Er.php');
 	include ('../layouts/header.php');
+	
+	if(isset($_POST['nombre'])){
+		$continenteC = new ContinenteController();
+		$continenteC->insertaContinente($_POST);
+	}
 ?>	
-	<br/>
-	<br/>
-	<br/>
+
 	<div class="row">
 		<div class="col-md-6">
 			<form role="form">

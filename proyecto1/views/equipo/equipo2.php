@@ -9,21 +9,20 @@
     include ('../../libs/Er.php');
 	include ('../layouts/header.php');
   
-  if(isset($_POST['nombre'])){
-	echo "<pre>";
-	print_r($_POST);
-	echo "</pre>";
+	if(isset($_POST['nombre'])){
+		$equipoC = new EquipoController();
+		$equipoC->insertaEquipo($_POST);
 	}
 ?>
        <div class="row">
         <div class="col-md-6">
           <form role="form" id="equipo" action="" method="POST">
-               <div class="form-group">
+               <div class="form-group" id="formularioequipo">
                   <label for="nombre">Nombre:</label>
                   <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Enter name">
                 </div>
                 <label for="exampleInputEmail1">Pais: </label>
-                  <select name="linea">
+                  <select name="idpais">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -34,7 +33,7 @@
                   <label for="escudo">Escudo:</label>
                   <input type="file" id="escudo">
                 </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Guardar</button>
            </form>
         </div>
       </div>

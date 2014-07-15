@@ -1,4 +1,18 @@
 $(document).ready(function() {
+				$(".elemento1").hide("slow");
+				$(".elemento2").hide("slow");
+				$(".elemento3").hide("slow");
+		$("#boton").click(function(){	
+		$(".elemento1").show("fats");	
+					});
+		$("#boton2").click(function(){
+		$(".elemento3").hide("fats");
+		$(".elemento2").show("fats");		
+					});
+		$("#boton3").click(function(){
+		$(".elemento2").hide("fats");	
+		$(".elemento3").show("fats");		
+					});
 			$(function () {
 			$('.fancybox').fancybox();
 			});
@@ -157,7 +171,7 @@ $(document).ready(function() {
 						}
 					},		
 				}
-			});<!---Fin del formulario1->
+			});//Fin del formulario1
 			<!--Estadio2, Ciudad2 (Nombre)-->
 			$('#formulario2').bootstrapValidator({
 				message: 'Este valor no es válido',
@@ -213,7 +227,7 @@ $(document).ready(function() {
 						}
 					}
 				}
-				});<!--Fin del formulario3-->
+				});<!--Fin del formulario4-->
 				$('#formulario4').bootstrapValidator({
 				message: 'Este valor no es válido',
 				feedbackIcons: {
@@ -258,4 +272,32 @@ $(document).ready(function() {
 					}
 				}
 				});<!--Fin del formulario4-->
+				
+			$('#formularioequipo').bootstrapValidator({
+				message: 'Este valor no es válido',
+				feedbackIcons: {
+					valid: 'glyphicon glyphicon-ok',
+					invalid: 'glyphicon glyphicon-remove',
+					validating: 'glyphicon glyphicon-refresh'
+				},
+				fields: {
+					nombre: {
+						message: 'El nombre de la revista no es válido',
+						validators: {
+							notEmpty: {
+								message: 'Es necesario el nombre de usuario y no puede estar vacío'
+							},
+							stringLength: {
+								min: 6,
+								max: 30,
+								message: 'El nombre de usuario debe ser mayor de 6 y menos de 30 caracteres de largo'
+							},
+							regexp: {
+								regexp: /^[a-zA-Z0-9_]+$/,
+								message: 'El nombre de usuario sólo puede consistir en alfabético, número y subrayado'
+							}
+						}
+					}
+				}
+				});//FIN DE FORMULARIOEQUIPO
 			});<!---FIN DEL READY->

@@ -8,14 +8,16 @@
     include ('../../controllers/EstadioController.php');
     include ('../../libs/Er.php');
 	include ('../layouts/header.php');
+	
+	if(isset($_POST['Nombre'])){
+		$estadioC = new EstadioController();
+		$estadioC->insertaEstadio($_POST);
+	}
 ?>
-<br/>
-<br/>
-<br/>
 			<div class="row">
 				<div class="col-md-6">
-					<form id="formulario2">
-					  <div class="form-group">
+					<form role="form" action="" method="POST">
+					  <div class="form-group" id="formulario2">
 						<label for="Nombre">Nombre: </label>
 						<input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="">
 					  </div>

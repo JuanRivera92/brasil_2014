@@ -8,13 +8,15 @@
     include ('../../controllers/PosisionController.php');
     include ('../../libs/Er.php');
 	include ('../layouts/header.php');
+	
+	if(isset($_POST['nombre'])){
+		$posisionC = new PosisionController();
+		$posisionC->insertaPosision($_POST);
+	}
 ?>
-<br/>
-<br/>
-<br/>
 			<div class="row">
 				<div class="col-md-6">
-					<form id="formulario4" role="form">
+					<form id="formulario4" role="form" action="" method="POST">
 					  <div class="form-group">
 						<label for="nombre">Nombre: </label>
 						<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Por ejemplo: Portero"/>
