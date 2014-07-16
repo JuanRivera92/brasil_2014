@@ -16,7 +16,7 @@ class Conexion {
         $this->db = ADONewConnection('mysql');
         $this->db->debug = false;
 			       //ip     user      pass    bd
-        $this->db->Connect('localhost','fifa_progweb','rivera','fifa');
+        $this->db->Connect('localhost','root','','fifa');
 
     }
     
