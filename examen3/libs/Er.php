@@ -12,7 +12,17 @@ class Er {
 	}
 	//nombre
 	public function valida_nombre($valor){
-	$exp_reg = '/[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*/';
+	$exp_reg = '/^[a-zA-Z0-9, ]*$/';
+	if (preg_match($exp_reg, $valor)) {
+		     return true;
+		} else { 
+		     return false;
+		} 
+	}
+	
+	//fecha ($fecha="2/03/2011";)
+	public function valida_fecha($valor){
+	$exp_reg = '/^(\d\d\/\d\d\/\d\d\d\d){1,1}$/';
 	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 
@@ -22,7 +32,7 @@ class Er {
 	
 	//status
 	public function valida_status($valor){
-	$exp_reg = '/[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*/';
+	$exp_reg = '/^[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*$/';
 	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 
@@ -32,7 +42,7 @@ class Er {
 	
 	//portada
 	public function valida_portada($valor){
-	$exp_reg = '/[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*/';
+	$exp_reg = '/^[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*$/';
 	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 
@@ -170,16 +180,6 @@ class Er {
 		} 
 	}
 	
-	//fecha ($fecha="2/03/2011";)
-	public function valida_fecha($valor){
-	$exp_reg = '/^(\d\d\/\d\d\/\d\d\d\d){1,1}$/';
-	if (preg_match($exp_reg, $valor)) {
-		     return true;
-		} else { 
-		     return false;
-		} 
-	}
-	
 	//clave de 4 a 45 digitos
 	public function valida_clave($valor){
 	$exp_reg = '/^[0-9]{4,45}$/i';
@@ -190,9 +190,9 @@ class Er {
 		} 
 	}
 	
-	//numero de 6 a 45 digitos
+	//numero de 1 a 45 digitos
 	public function valida_numero($valor){
-	$exp_reg = '/^[0-9]{6,45}$/i';
+	$exp_reg = '/^[0-9]{1,45}$/i';
 	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 

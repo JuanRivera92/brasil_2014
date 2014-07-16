@@ -16,7 +16,6 @@ class Revista extends Modelo{
         'clave'=>array(),
 		'directorio'=>array(),
 		'editorial'=>array(),
-		'id_status'=>array(),
     );
     
     public $errores = array( );
@@ -31,7 +30,6 @@ class Revista extends Modelo{
 	private $clave;
     private $directorio;
     private $editorial;
-	private $id_status;
        
     
     function Autor(){
@@ -188,21 +186,6 @@ class Revista extends Modelo{
         }
             $this->editorial = trim($valor);
         }//Fin de editorial
-		
-	//Inicio id_status
-    public function get_id_status(){
-        return $this->id_status;
-    }
-
-    public function set_id_status($valor){
-        $er = new Er();
-        
-        if ( !$er->valida_id_status($valor) ){
-            $this->errores[] = "Este id_status (".$valor.") no es valido";
-        }
-            $this->id_status = trim($valor);
-        }//Fin de id_status
-		
 }//Fin de clase Revista
 
 ?>

@@ -38,10 +38,13 @@
 					<label for="contenido">Contenido:</label>
 					<textarea type="text" class="form-control" id="contenido" name="contenido"></textarea>
 				</div>
-				<div class='input-group date' id='datetimepicker1'>
-					<label for="fecha_creacion">Fecha de Creacion:</label>
-					<input type="datetime" class="form-control" id="fecha_creacion" name="fecha_creacion" >
-					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+				<div id="datetimepicker2" class="input-append">
+					<label for="fecha_creacion">Fecha:</label>
+					<input id="fecha_creacion" name="fecha_creacion" class="form-control" data-format="yyyy-MM-dd" type="text"></input>
+					<span class="add-on">
+					  <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+					  </i>
+					</span>
 				</div>
 				<div class="form-group">
 					<label for="archivo_pdf">Archivo PDF:</label>
