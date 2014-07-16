@@ -427,5 +427,5 @@ $(document).ready(function() {
 						}
 					},
 				}
-				});<!--Fin del formulario4-->
-			});<!---FIN DEL READY->
+				});//Fin del formulario4
+			});//FIN DEL READY

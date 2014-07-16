@@ -11,14 +11,15 @@
 			print_r($datos);
 			echo "</pre>";
 			$autor = new Autor();
-			$autor->set_id_autor($datos['id_autor']);
 			$autor->set_nombre($datos['nombre']);
 			$autor->set_apellidos($datos['apellidos']);
 			$autor->set_email($datos['email']);
 			
 			if(count($autor->errores)>0){
 				print_r($autor->errores);
+				
 			}
+			$autor->inserta($autor->get_atributos());
 			die();
 		}
 		

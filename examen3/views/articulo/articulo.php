@@ -45,7 +45,7 @@
 				</div>
 				<div class="form-group">
 					<label for="archivo_pdf">Archivo PDF:</label>
-					<input type="file" id="archivo_pdf" name="archivo_pdf">
+					<input type="text" class="form-control" id="archivo_pdf" name="archivo_pdf">
 				</div>
 				<div class="form-group">
 					<label for="conclusiones">Conclusiones:</label>
@@ -62,7 +62,7 @@
 				<div class="form-group">
 					<button type="submit" class="btn btn-primary">Guardar</button>
 				</div>
-			</form>
+			</form>			
 		</div>
 	</div><!--FIN CLASS ROW-->
 	

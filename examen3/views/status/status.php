@@ -18,16 +18,6 @@
 	<div class="row">
 		<div class="col-md-6" id="Formulariostatus">
 			<form role="form" id="autor" action="" method="POST">
-				<div>
-				     <label for="id_status">ID status:</label>
-						<select name="id_status">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-						</select>
-				</div>
 				<div class="form-group">
 					<label for="status">Status:</label>
 					<input type="text" class="form-control" id="status" name="status">

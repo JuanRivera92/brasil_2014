@@ -6,7 +6,6 @@ class Articulo extends Modelo{
     
     
     public $atributos = array(
-		'id_articulo'=>array(),
         'nombre'=>array(),
         'resumen'=>array(),
 		'introduccion'=>array(),
@@ -22,7 +21,6 @@ class Articulo extends Modelo{
     
     public $errores = array( );
     
-	private $id_articulo;
     private $nombre;
     private $resumen;
 	private $introduccion;
@@ -36,7 +34,7 @@ class Articulo extends Modelo{
 	private $referencias;
        
     
-    function Autor(){
+    function Articulo(){
         parent::Modelo();
     }
     
@@ -134,20 +132,6 @@ class Articulo extends Modelo{
             $this->contenido = trim($valor);
         }//Fin de contenido
 		
-	//Inicio fecha_creacion
-    public function get_fecha_creacion(){
-        return $this->fecha_creacion;
-    }
-
-    public function set_fecha_creacion($valor){
-        $er = new Er();
-        
-        if ( !$er->valida_fecha_creacion($valor) ){
-            $this->errores[] = "Esta fecha de creacion (".$valor.") no es valido";
-        }
-            $this->fecha_creacion = trim($valor);
-        }//Fin de fecha_creacion
-		
 	//Inicio archivo_pdf
     public function get_archivo_pdf(){
         return $this->archivo_pdf;
@@ -198,7 +182,7 @@ class Articulo extends Modelo{
     public function set_agradecimientos($valor){
         $er = new Er();
         
-        if ( !$er->valida_agradecimientosl($valor) ){
+        if ( !$er->valida_agradecimientos($valor) ){
             $this->errores[] = "Este agradecimientos (".$valor.") no es valido";
         }
             $this->agradecimientos = trim($valor);

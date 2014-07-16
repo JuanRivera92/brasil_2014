@@ -20,6 +20,25 @@ class Er {
 		} 
 	}
 	
+	//status
+	public function valida_status($valor){
+	$exp_reg = '/[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*/';
+	if (preg_match($exp_reg, $valor)) {
+		     return true;
+		} else { 
+		     return false;
+		} 
+	}
+	
+	//portada
+	public function valida_portada($valor){
+	$exp_reg = '/[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*/';
+	if (preg_match($exp_reg, $valor)) {
+		     return true;
+		} else { 
+		     return false;
+		} 
+	}
 	
 	//resumen
 	public function valida_resumen($valor){
@@ -72,8 +91,8 @@ class Er {
 	}
 	
 	//agradecimiento
-	public function valida_agradecimiento($valor){
-	$exp_reg = '/[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*/';
+	public function valida_agradecimientos($valor){
+	$exp_reg = '/^[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*$/';
 	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 
@@ -142,7 +161,7 @@ class Er {
 	}
 	
 	//Apellido
-	public function valida_Apellido($valor){
+    public function valida_apellidos($valor){
 	$exp_reg = '/[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*/';
 	if (preg_match($exp_reg, $valor)) {
 		     return true;
@@ -174,6 +193,16 @@ class Er {
 	//numero de 6 a 45 digitos
 	public function valida_numero($valor){
 	$exp_reg = '/^[0-9]{6,45}$/i';
+	if (preg_match($exp_reg, $valor)) {
+		     return true;
+		} else { 
+		     return false;
+		} 
+	}
+	
+	//id_status
+	public function valida_id_status($valor){
+	$exp_reg = '/^[0-9]$/i';
 	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 

@@ -6,7 +6,6 @@ class Revista extends Modelo{
     
     
     public $atributos = array(
-		'id_revista'=>array(),
         'nombre'=>array(),
         'portada'=>array(),
 		'fecha'=>array(),
@@ -22,7 +21,6 @@ class Revista extends Modelo{
     
     public $errores = array( );
     
-	private $id_revista;
     private $nombre;
     private $portada;
 	private $fecha;
@@ -49,19 +47,6 @@ class Revista extends Modelo{
         return $rs;
     }
 	
-	//Inicio de id_revista
-    public function get_id_revista(){
-        return $this->id_revista;
-    }
-
-    public function set_id_revista($valor){
-        $er = new Er();
-        
-        if ( !$er->valida_id_revista($valor) ){
-            $this->errores[] = "Este id de revista (".$valor.") no es valido";
-        }
-            $this->id_revista = trim($valor);
-        }//Fin de id_revista
 	
 	//Inicio de nombre
     public function get_nombre(){

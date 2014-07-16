@@ -18,7 +18,6 @@
 	<div class="row">
 		<div class="col-md-6" id="Formularioautor">
 			<form role="form" id="autor" action="" method="POST">
-			<div id="Formularioautor">
 				<div class="form-group">
 					<label for="nombre">Nombre:</label>
 					<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del Autor">
@@ -34,7 +33,6 @@
 				<div class="form-group">
 					<button type="submit" class="btn btn-primary">Guardar</button>
 				</div>
-			</div>	
 			</form>
 		</div>
 	</div><!--FIN CLASS ROW-->

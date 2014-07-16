@@ -6,13 +6,10 @@ class Status extends Modelo{
     
     
     public $atributos = array(
-		'id_status'=>array(),
         'status'=>array(),
     );
     
     public $errores = array( );
-    
-	private $id_status;
     private $status;       
     
     function Status(){
@@ -27,20 +24,6 @@ class Status extends Modelo{
         }
         return $rs;
     }
-	
-	//Inicio de id_status
-    public function get_id_status(){
-        return $this->id_status;
-    }
-
-    public function set_id_status($valor){
-        $er = new Er();
-        
-        if ( !$er->valida_id_status($valor) ){
-            $this->errores[] = "Este id de status (".$valor.") no es valido";
-        }
-            $this->id_status = trim($valor);
-        }//Fin de id_status
 	
 	//Inicio de status
     public function get_status(){

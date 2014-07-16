@@ -6,7 +6,6 @@ class Autor extends Modelo{
     
     
     public $atributos = array(
-		'id_autor'=>array(),
         'nombre'=>array(),
         'apellidos'=>array(),
 		'email'=>array(),
@@ -14,7 +13,6 @@ class Autor extends Modelo{
     
     public $errores = array( );
     
-	private $id_autor;
     private $nombre;
     private $apellidos;
 	private $email;
@@ -32,20 +30,6 @@ class Autor extends Modelo{
         }
         return $rs;
     }
-	
-	//Inicio de id_autor
-    public function get_id_autor(){
-        return $this->id_autor;
-    }
-
-    public function set_id_autor($valor){
-        $er = new Er();
-        
-        if ( !$er->valida_id_autor($valor) ){
-            $this->errores[] = "Este id de autor (".$valor.") no es valido";
-        }
-            $this->id_autor = trim($valor);
-        }//Fin de id_autor
 	
 	//Inicio de nombre
     public function get_nombre(){

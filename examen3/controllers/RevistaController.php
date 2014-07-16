@@ -11,7 +11,6 @@
 			print_r($datos);
 			echo "</pre>";
 			$revista = new Revista();
-			$revista->set_id_revista($datos['id_revista']);
 			$revista->set_nombre($datos['nombre']);
 			$revista->set_portada($datos['portada']);
 			$revista->set_fecha($datos['fecha']);
@@ -26,7 +25,9 @@
 			
 			if(count($revista->errores)>0){
 				print_r($revista->errores);
+				$revista->inserta($revista->get_atributos());
 			}
+			$revista->inserta($revista->get_atributos());
 			die();
 		}
 		

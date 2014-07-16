@@ -19,16 +19,6 @@
 		<div class="col-md-6" id="Formulariorevista">
 			<form role="form" id="autor" action="" method="POST">
 				<div>
-				     <label for="id_revista">ID Revista:</label>
-						<select name="id_revista">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-						</select>
-				</div>
-				<div>
 					<label for="nombre">Nombre:</label>
 					<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre de la revista">
 				</div>
