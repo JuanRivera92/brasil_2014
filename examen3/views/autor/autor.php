@@ -16,7 +16,7 @@
 ?>	
 	
 	<div class="row">
-		<div class="col-md-6">
+		<div class="col-md-6" id="Formularioautor">
 			<form role="form" id="autor" action="" method="POST">
 				<div>
 				     <label for="id_autor">ID Autor:</label>
@@ -33,7 +33,7 @@
 					<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del Autor">
 				</div>
 				<div class="form-group">
-					<label for="apellidos">Apellido:</label>
+					<label for="apellidos">Apellidos:</label>
 					<input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Apellido del Autor">
 				</div>
 				<div class="form-group">

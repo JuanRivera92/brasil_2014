@@ -16,7 +16,7 @@
 ?>	
 	
 	<div class="row">
-		<div class="col-md-6">
+		<div class="col-md-6" id="Formularioarticulo">
 			<form role="form" id="autor" action="" method="POST">
 				<div>
 				     <label for="id_articulo">ID Articulo:</label>
