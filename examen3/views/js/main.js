@@ -119,10 +119,6 @@ $(document).ready(function() {
 								max: 100,
 								message: 'El nombre del archivo debe ser mayor de 6 y menos de 100 caracteres de largo'
 							},
-							regexp: {
-								regexp: /^[a-zA-Z0-9_]+$/,
-								message: 'El nombre del archivo sólo puede consistir en alfabético, número y subrayado'
-							}
 						}
 					},
 					conclusiones: {
@@ -228,10 +224,6 @@ $(document).ready(function() {
 							notEmpty: {
 								message: 'Es necesario el email del autor y no puede estar vacío'
 							},
-							regexp: {
-								regexp: /^[a-zA-Z0-9_]+$/,
-								message: 'El email del autor sólo puede consistir en alfabético, número y subrayado'
-							}
 						}
 					},
 				}
