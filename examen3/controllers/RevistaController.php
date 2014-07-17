@@ -13,7 +13,7 @@
 			$revista = new Revista();
 			$revista->set_nombre($datos['nombre']);
 			$revista->set_portada($datos['portada']);
-			$revista->set_fecha($datos['fecha']);
+			$revista->set_fecha_creacion($datos['fecha_creacion']);
 			$revista->set_volumen($datos['volumen']);
 			$revista->set_titulo($datos['titulo']);
 			$revista->set_subtitulo($datos['subtitulo']);

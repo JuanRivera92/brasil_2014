@@ -28,7 +28,7 @@
 				</div>
 				<div id="datetimepicker2" class="input-append">
 					<label for="fecha_creacion">Fecha:</label>
-					<input id="fecha_creacion" name="fecha_creacion" class="form-control" data-format="yyyy-MM-dd" type="text"></input>
+					<input id="fecha_creacion" name="fecha_creacion" class="form-control" data-format="dd-MM-yyyy" type="date"></input>
 					<span class="add-on">
 					  <i data-time-icon="icon-time" data-date-icon="icon-calendar">
 					  </i>
@@ -40,11 +40,11 @@
 				</div>
 				<div class="form-group">
 					<label for="titulo">Titulo:</label>
-					<textarea type="text" class="form-control" id="titulo" name="titulo"></textarea>
+					<input type="text" class="form-control" id="titulo" name="titulo">
 				</div>
 				<div class="form-group">
 					<label for="subtitulo">Subtitulo:</label>
-					<textarea type="text" class="form-control" id="subtitulo" name="subtitulo"></textarea>
+					<input type="text" class="form-control" id="subtitulo" name="subtitulo">
 				</div>
 				<div class="form-group">
 					<label for="numero">Numero :</label>

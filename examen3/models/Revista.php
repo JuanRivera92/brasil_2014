@@ -8,7 +8,7 @@ class Revista extends Modelo{
     public $atributos = array(
         'nombre'=>array(),
         'portada'=>array(),
-		'fecha'=>array(),
+		'fecha_creacion'=>array(),
 		'volumen'=>array(),
         'titulo'=>array(),
 		'subtitulo'=>array(),
@@ -22,7 +22,7 @@ class Revista extends Modelo{
     
     private $nombre;
     private $portada;
-	private $fecha;
+	private $fecha_creacion;
 	private $volumen;
     private $titulo;
     private $subtitulo;
@@ -76,17 +76,17 @@ class Revista extends Modelo{
         }//Fin de portada
 		
 	//Inicio fecha
-    public function get_fecha(){
-        return $this->fecha;
+    public function get_fecha_creacion(){
+        return $this->fecha_creacion;
     }
 
-    public function set_fecha($valor){
+    public function set_fecha_creacion($valor){
         $er = new Er();
         
-        if ( !$er->valida_fecha($valor) ){
-            $this->errores[] = "Esta fecha (".$valor.") no es valida";
+        if ( !$er->valida_fecha_creacion($valor) ){
+            $this->errores[] = "Esta fecha de creacion (".$valor.") no es valida";
         }
-            $this->fecha = trim($valor);
+            $this->fecha_creacion = trim($valor);
         }//Fin de fecha
 		
 		//Inicio volumen
