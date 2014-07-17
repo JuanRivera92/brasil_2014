@@ -263,7 +263,35 @@ class Er {
 		} 
 	}
 	
-	//Archivo
+	//pais
+	public function valida_pais($valor){
+	$exp_reg = '/^[a-zA-Z0-9, ,_]*$/';
+	if (preg_match($exp_reg, $valor)) {
+		     return true;
+		} else { 
+		     return false;
+		} 
+	}
+	
+	//bandera
+	public function valida_bandera($valor){
+	$exp_reg = '/^[a-zA-Z0-9, ,_]*$/';
+	if (preg_match($exp_reg, $valor)) {
+		     return true;
+		} else { 
+		     return false;
+		} 
+	}
+	
+	//idcontinente
+	public function valida_idcontinente($valor){
+	$exp_reg = '/^[1-2]*$/';
+	if (preg_match($exp_reg, $valor)) {
+		     return true;
+		} else { 
+		     return false;
+		} 
+	}
 	
 }
 ?>    

@@ -445,4 +445,50 @@ $(document).ready(function() {
 				}
 			});//FIN FORMULARIO revista
 			
+			//INICIO FORMULARIO pais
+		$('#Formulariopais').bootstrapValidator({
+				message: 'Este valor no es válido',
+				feedbackIcons: {
+					valid: 'glyphicon glyphicon-ok',
+					invalid: 'glyphicon glyphicon-remove',
+					validating: 'glyphicon glyphicon-refresh'
+				},
+				fields: {
+					nombre: {
+						message: 'El nombre del pais no es válido',
+						validators: {
+							notEmpty: {
+								message: 'Es necesario el status de la revista y no puede estar vacío'
+							},
+							stringLength: {
+								min: 2,
+								max: 100,
+								message: 'El status de la revista debe ser mayor de 2 y menos de 100 caracteres de largo'
+							},
+							regexp: {
+								regexp: /^[a-zA-Z0-9]*$/,
+								message: 'El nombre de usuario sólo puede consistir en alfabético, número y subrayado'
+							}
+						}
+					},
+					idcontinente: {
+						message: 'El idcontinente no es válido',
+						validators: {
+							notEmpty: {
+								message: 'Es necesario idcontinente de la revista y no puede estar vacío'
+							},
+							stringLength: {
+								min: 1,
+								max: 2,
+								message: 'El status de la revista debe ser mayor de 1 y menos de 2 caracteres de largo'
+							},
+							regexp: {
+								regexp: /^[0-2]*$/,
+								message: 'El nombre de usuario sólo puede consistir en número'
+							}
+						}
+					},
+				}
+			});//FIN FORMULARIO status
+			
 	});//FIN DEL READY

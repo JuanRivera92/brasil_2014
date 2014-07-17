@@ -21,10 +21,8 @@
 				<div class="form-group">
 					<label for="status">Status:</label>
 					<input type="text" class="form-control" id="status" name="status">
-				</div>
-				<div class="form-group">
-					<button type="submit" class="btn btn-primary">Guardar</button>
-				</div>
+				</div>	
+				<button type="submit" class="btn btn-primary">Guardar</button>
 			</form>
 		</div>
 	</div><!--FIN CLASS ROW-->

@@ -59,6 +59,7 @@
 			<li><a href="<?php echo BASEURL; ?>/views/revista/revista.php">Revista</a></li>
 			<li><a href="<?php echo BASEURL; ?>/views/articulo/articulo.php">Articulo</a></li>
 			<li><a href="<?php echo BASEURL; ?>/views/status/status.php">Status</a></li>
+			<li><a href="<?php echo BASEURL; ?>/views/pais/pais.php">Pais</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">opciones  <b class="caret"></b></a>
               <ul class="dropdown-menu">

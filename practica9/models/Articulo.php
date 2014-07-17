@@ -76,7 +76,7 @@ class Articulo extends Modelo{
 	//Fin de nombre
 	
 	//Inicio de resumen  
-    public function get_portada(){
+    public function get_resumen(){
         return $this->resumen;
     }
 
