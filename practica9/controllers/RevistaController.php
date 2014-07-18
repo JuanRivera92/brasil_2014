@@ -29,9 +29,7 @@
 				print_r($revista->errores);
 				
 			}
-			// else{
-				// move_uploaded_file($archivos['portada']['tmp_name'],"../img/".$archivos['portada']['name']);
-			// }
+			move_uploaded_file($archivos['portada']['tmp_name'],"../img/".$archivos['portada']['name']);
 			$revista->inserta($revista->get_atributos());
 			die();
 		}

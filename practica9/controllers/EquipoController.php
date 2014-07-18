@@ -22,9 +22,7 @@
 				print_r($equipo->errores);
 				
 			}
-			// else{
-				// move_uploaded_file($archivos['portada']['tmp_name'],"../img/".$archivos['portada']['name']);
-			// }
+				move_uploaded_file($archivos['escudo']['tmp_name'],"../img/".$archivos['escudo']['name']);
 			$equipo->inserta($equipo->get_atributos());
 			die();
 		}

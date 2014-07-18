@@ -19,10 +19,9 @@
 			if(count($pais->errores)>0){
 				print_r($pais->errores);
 			}
-			// else{
-				// move_uploaded_file($archivos['portada']['tmp_name'],"../img/".$archivos['portada']['name']);
-			// }
 			$pais->inserta($pais->get_atributos());
+				move_uploaded_file($archivos['bandera']['tmp_name'],"../img/".$archivos['bandera']['name']);
+			
 			die();
 		}
 		

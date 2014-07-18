@@ -202,7 +202,7 @@ class Er {
 	//Archivo PDF
 	public function valida_archivo_pdf($valor){
 	$exp_reg = '/^[a-zA-Z0-9, ]*$/';
-	if (preg_match($exp_reg, $valor)) {
+	if (preg_match($exp_reg, $valor['name'])) {
 		     return true;
 		} else { 
 		     return false;

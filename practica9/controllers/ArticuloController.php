@@ -19,7 +19,7 @@
 			$articulo->set_metodologia($datos['metodologia']);
 			$articulo->set_contenido($datos['contenido']);
 			$articulo->set_fecha_creacion($datos['fecha_creacion']);
-			$articulo->set_archivo_pdf($archivos['name']);
+			$articulo->set_archivo_pdf($archivos['archivo_pdf']);
 			$articulo->set_id_status($datos['id_status']);
 			$articulo->set_conclusiones($datos['conclusiones']);
 			$articulo->set_agradecimientos($datos['agradecimientos']);
@@ -27,9 +27,11 @@
 			
 			if(count($articulo->errores)>0){
 				print_r($articulo->errores);
-				die();
+				
 			}
+			move_uploaded_file($archivos['archivo_pdf']['tmp_name'],"../img/".$archivos['archivo_pdf']['name']);
 			$articulo->inserta($articulo->get_atributos());
+			die();
 		}
 		
 		public function validaUsuario($datos){
