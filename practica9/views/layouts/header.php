@@ -54,22 +54,13 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="<?php echo BASEURL; ?>/views/site/inicio2.php">Inicio</a></li>
             <li><a href="<?php echo BASEURL; ?>/views/autor/autor.php">Autor</a></li>
 			<li><a href="<?php echo BASEURL; ?>/views/revista/revista.php">Revista</a></li>
 			<li><a href="<?php echo BASEURL; ?>/views/articulo/articulo.php">Articulo</a></li>
 			<li><a href="<?php echo BASEURL; ?>/views/status/status.php">Status</a></li>
 			<li><a href="<?php echo BASEURL; ?>/views/pais/pais.php">Pais</a></li>
 			<li><a href="<?php echo BASEURL; ?>/views/equipo/equipo.php">Equipo</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">opciones  <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="">op1</a></li>
-                <li class="divider"></li>
-                <li><a href="">op2</a></li>
-              </ul>
-            </li>
-
+			<li><a href="<?php echo BASEURL; ?>/views/integrante/integrante.php">Integrante</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">

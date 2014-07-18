@@ -1,31 +1,34 @@
 <?php
-	class EquipoController extends Equipo{
+	class IntegranteController extends Integrante{
 		
 		public $muestra_errores = false;
 		function __construct(){
-			// parent::Equipo();
+			// parent::Integrante();
 		}
 		
-		public function insertaEquipo($datos, $archivos){
+		public function insertaIntegrante($datos, $archivos){
 			echo "<pre>datos: ";
 			print_r($datos);
 			print_r($archivos);
 			echo "</pre>";
 			
-			$equipo = new Equipo();
+			$integrante = new Integrante();
 			
-			$equipo->set_nombre($datos['nombre']);
-			$equipo->set_idpais($datos['idpais']);
-			$equipo->set_escudo($archivos['escudo']);
+			$integrante->set_nombre($datos['nombre']);
+			$integrante->set_apellido($datos['apellido']);
+			$integrante->set_peso($datos['peso']);
+			$integrante->set_estatura($datos['estatura']);
+			$integrante->set_foto($archivos['foto']);
+			$integrante->set_edad($datos['edad']);
 			
-			if(count($equipo->errores)>0){
-				print_r($equipo->errores);
+			if(count($integrante->errores)>0){
+				print_r($integrante->errores);
 				
 			}
 			// else{
 				// move_uploaded_file($archivos['portada']['tmp_name'],"../img/".$archivos['portada']['name']);
 			// }
-			$equipo->inserta($equipo->get_atributos());
+			$integrante->inserta($integrante->get_atributos());
 			die();
 		}
 		

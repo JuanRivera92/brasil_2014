@@ -22,8 +22,18 @@ class Er {
 		} 
 	}
 	
-	//Apellido
+	//Apellidos
     public function valida_apellidos($valor){
+	$exp_reg = '/^[a-zA-Z0-9, ]*$/';
+	if (preg_match($exp_reg, $valor)) {
+		     return true;
+		} else { 
+		     return false;
+		} 
+	}
+	
+		//Apellido
+    public function valida_apellido($valor){
 	$exp_reg = '/^[a-zA-Z0-9, ]*$/';
 	if (preg_match($exp_reg, $valor)) {
 		     return true;
@@ -282,7 +292,7 @@ class Er {
 	//bandera
 	public function valida_bandera($valor){
 	$exp_reg = '/^[a-zA-Z0-9, ,_]*$/';
-	if (preg_match($exp_reg, $valor)) {
+	if (preg_match($exp_reg, $valor['name'])) {
 		     return true;
 		} else { 
 		     return false;
@@ -312,7 +322,7 @@ class Er {
 	//escudo
 	public function valida_escudo($valor){
 	$exp_reg = '/^[a-zA-Z0-9, ,_]*$/';
-	if (preg_match($exp_reg, $valor)) {
+	if (preg_match($exp_reg, $valor['name'])) {
 		     return true;
 		} else { 
 		     return false;
@@ -323,6 +333,46 @@ class Er {
 	public function valida_id_status($valor){
 	$exp_reg = '/^[0-9]{1,11}$/i';
 	if (preg_match($exp_reg, $valor)) {
+		     return true;
+		} else { 
+		     return false;
+		} 
+	}
+	
+		//peso de 1 a 11 digitos
+	public function valida_peso($valor){
+	$exp_reg = '/^[0-9]*$/';
+	if (preg_match($exp_reg, $valor)) {
+		     return true;
+		} else { 
+		     return false;
+		} 
+	}
+	
+			//estatura de 1 a 11 digitos
+	public function valida_estatura($valor){
+	$exp_reg = '/^[0-9]*$/';
+	if (preg_match($exp_reg, $valor)) {
+		     return true;
+		} else { 
+		     return false;
+		} 
+	}
+	
+	//peso de 1 a 11 digitos
+	public function valida_edad($valor){
+	$exp_reg = '/^[0-9]*$/';
+	if (preg_match($exp_reg, $valor)) {
+		     return true;
+		} else { 
+		     return false;
+		} 
+	}
+	
+		//foto
+	public function valida_foto($valor){
+	$exp_reg = '/^[a-zA-Z0-9]*$/';
+	if (preg_match($exp_reg, $valor['name'])) {
 		     return true;
 		} else { 
 		     return false;

@@ -13,7 +13,7 @@
 			echo "</pre>";
 			$pais = new Pais();
 			$pais->set_nombre($datos['nombre']);
-			$pais->set_bandera($archivos['name']);
+			$pais->set_bandera($archivos['bandera']);
 			$pais->set_idcontinente($datos['idcontinente']);
 			
 			if(count($pais->errores)>0){
