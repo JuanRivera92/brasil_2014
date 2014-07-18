@@ -322,7 +322,7 @@ class Er {
 	//escudo
 	public function valida_escudo($valor){
 	$exp_reg = '/^[a-zA-Z0-9, ,_]*$/';
-	if (preg_match($exp_reg, $valor['name'])) {
+	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 
 		     return false;
