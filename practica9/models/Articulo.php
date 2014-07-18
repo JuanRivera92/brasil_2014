@@ -13,6 +13,7 @@ class Articulo extends Modelo{
         'contenido'=>array(),
 		'fecha_creacion'=>array(),
 		'archivo_pdf'=>array(),
+		'id_status'=>array(),
 		'conclusiones'=>array(),
 		'agradecimientos'=>array(),
 		'referencias'=>array(),
@@ -130,6 +131,20 @@ class Articulo extends Modelo{
         }
             $this->contenido = trim($valor);
         }//Fin de contenido
+		
+	//Inicio fecha_creacion
+    public function get_fecha_creacion(){
+        return $this->fecha_creacion;
+    }
+
+    public function set_fecha_creacion($valor){
+        $er = new Er();
+        
+        if ( !$er->valida_fecha_creacion($valor) ){
+            $this->errores[] = "Esta fecha_creacion (".$valor.") no es valido";
+        }
+            $this->fecha_creacion = trim($valor);
+        }//Fin de fecha_creacion
 		
 	//Inicio archivo_pdf
     public function get_archivo_pdf(){

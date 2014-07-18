@@ -175,7 +175,10 @@ class Er {
 	
 	//fecha ($fecha="2/03/2011";)
 	public function valida_fecha_creacion($valor){
-	$exp_reg = '/^[a-zA-Z0-9, ]*$/';
+	$patron = "/-/";
+	$remplazo = "/";
+	$exp_reg = '/^\d{4}\/\d{1,2}\/\d{1,2}$/';
+	$valor = preg_replace ($patron, $remplazo, $valor);
 	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 
@@ -286,6 +289,36 @@ class Er {
 	//idcontinente
 	public function valida_idcontinente($valor){
 	$exp_reg = '/^[1-2]*$/';
+	if (preg_match($exp_reg, $valor)) {
+		     return true;
+		} else { 
+		     return false;
+		} 
+	}
+	
+	//idpais
+	public function valida_idpais($valor){
+	$exp_reg = '/^[1-9]*$/';
+	if (preg_match($exp_reg, $valor)) {
+		     return true;
+		} else { 
+		     return false;
+		} 
+	}
+	
+	//escudo
+	public function valida_escudo($valor){
+	$exp_reg = '/^[a-zA-Z0-9, ,_]*$/';
+	if (preg_match($exp_reg, $valor)) {
+		     return true;
+		} else { 
+		     return false;
+		} 
+	}
+	
+		//id_status de 1 a 11 digitos
+	public function valida_id_status($valor){
+	$exp_reg = '/^[0-9]{1,11}$/i';
 	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 

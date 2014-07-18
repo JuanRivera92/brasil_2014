@@ -1,33 +1,26 @@
 <?php
-	class ArticuloController extends Articulo{
+	class EquipoController extends Equipo{
 		
 		public $muestra_errores = false;
 		function __construct(){
-			// parent::Articulo();
+			// parent::Equipo();
 		}
 		
-		public function insertaArticulo($datos){
+		public function insertaEquipo($datos){
 			echo "<pre>datos: ";
 			print_r($datos);
 			echo "</pre>";
-			$articulo = new Articulo();
-			$articulo->set_nombre($datos['nombre']);
-			$articulo->set_resumen($datos['resumen']);
-			$articulo->set_introduccion($datos['introduccion']);
-			$articulo->set_metodologia($datos['metodologia']);
-			$articulo->set_contenido($datos['contenido']);
-			$articulo->set_fecha_creacion($datos['fecha_creacion']);
-			$articulo->set_archivo_pdf($datos['archivo_pdf']);
-			$articulo->set_id_status($datos['id_status']);
-			$articulo->set_conclusiones($datos['conclusiones']);
-			$articulo->set_agradecimientos($datos['agradecimientos']);
-			$articulo->set_referencias($datos['referencias']);
+			$equipo = new Equipo();
+			$equipo->set_nombre($datos['nombre']);
+			$equipo->set_idpais($datos['idpais']);
+			$equipo->set_escudo($datos['escudo']);
 			
-			if(count($articulo->errores)>0){
-				print_r($articulo->errores);
-				die();
+			if(count($equipo->errores)>0){
+				print_r($equipo->errores);
+				
 			}
-			$articulo->inserta($articulo->get_atributos());
+			$equipo->inserta($equipo->get_atributos());
+			die();
 		}
 		
 		public function validaUsuario($datos){
