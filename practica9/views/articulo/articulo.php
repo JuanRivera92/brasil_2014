@@ -11,13 +11,13 @@
 	
 	if(isset($_POST['nombre'])){
 		$articuloC = new ArticuloController();
-		$articuloC->insertaArticulo($_POST);
+		$articuloC->insertaArticulo($_POST, $_FILES);
 	}
 ?>	
 	
 	<div class="row">
 		<div class="col-md-6" id="Formularioarticulo">
-			<form role="form" id="autor" action="" method="POST">
+			<form role="form" id="autor" action="" method="POST" enctype="multipart/form-data">
 				<div class="form-group">
 					<label for="nombre">Nombre: </label>
 					<input style="background-color:transparent; " type="text" class="form-control" id="nombre" name="nombre" />
@@ -44,7 +44,7 @@
 				</div>
 				<div class="form-group">
 					<label for="archivo_pdf">Archivo PDF:</label>
-					<input type="text" class="form-control" id="archivo_pdf" name="archivo_pdf">
+					<input type="file" id="archivo_pdf" name="archivo_pdf">
 				</div>
 				<div class="form-group">
 					<label for="id_status">ID Status:</label>

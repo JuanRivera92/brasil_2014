@@ -69,10 +69,10 @@ class Equipo extends Modelo{
     public function set_escudo($valor){
         $er = new Er();
         
-        if ( !$er->valida_escudo($valor) ){
+        if ( !$er->valida_escudo($valor['name']) ){
             $this->errores[] = "Este escudo (".$valor.") no es valido";
         }
-            $this->escudo = trim($valor);
+            $this->escudo = trim($valor['name']);
         }//Fin de escudo
 		
 

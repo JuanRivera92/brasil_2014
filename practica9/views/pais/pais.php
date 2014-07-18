@@ -11,20 +11,20 @@
 	
 	if(isset($_POST['nombre'])){
 		$paisC = new PaisController();
-		$paisC->insertaPais($_POST);
+		$paisC->insertaPais($_POST, $_FILES);
 	}
 ?>	
 
 <div class=row>
 	<div class="col-md-6" id="Formulariopais">
-		<form role="form" id="pais" action="" method="POST">
+		<form role="form" id="pais" action="" method="POST" enctype="multipart/form-data">
 			<div class="form-group">
 				<label for="nombre">Nombre: </label>
 				<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Por ejemplo: M&eacute;xico">
 			</div>
 			<div class="form-group">
 				<label for="bandera">Bandera: </label>
-				<input type="text" class="form-control" id="bandera" name="bandera">
+				<input type="file" id="bandera" name="bandera">
 			</div>
 			<div class="form-group">
 				<label for="idcontinente">Continente: </label>

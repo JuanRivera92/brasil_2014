@@ -210,10 +210,6 @@ $(document).ready(function() {
 								max: 100,
 								message: 'El PDF debe ser mayor de 2 y menos de 100 caracteres de largo'
 							},
-							regexp: {
-								regexp: /^[a-zA-Z0-9, ,_]*$/,
-								message: 'El PDF sólo puede consistir en alfabético, número y subrayado'
-							}
 						}
 					},
 					conclusiones: {
@@ -297,23 +293,23 @@ $(document).ready(function() {
 							}
 						}
 					},
-					portada: {
-						message: 'La portada no es válido',
-						validators: {
-							notEmpty: {
-								message: 'Es necesario La portada y no puede estar vacío'
-							},
-							stringLength: {
-								min: 2,
-								max: 100,
-								message: 'La portada debe ser mayor de 2 y menos de 100 caracteres de largo'
-							},
-							regexp: {
-								regexp: /^[a-zA-Z0-9, ,_]*$/,
-								message: 'La portada sólo puede consistir en alfabético, número y subrayado'
-							}
-						}
-					},
+					// portada: {
+						// message: 'La portada no es válido',
+						// validators: {
+							// notEmpty: {
+								// message: 'Es necesario La portada y no puede estar vacío'
+							// },
+							// stringLength: {
+								// min: 2,
+								// max: 100,
+								// message: 'La portada debe ser mayor de 2 y menos de 100 caracteres de largo'
+							// },
+							// regexp: {
+								// regexp: /^[a-zA-Z0-9, ,_]*$/,
+								// message: 'La portada sólo puede consistir en alfabético, número y subrayado'
+							// }
+						// }
+					// },
 					fecha_creacion: {
 						message: 'La fecha no es válido',
 						validators: {
@@ -397,9 +393,9 @@ $(document).ready(function() {
 								message: 'Es necesario La clave y no puede estar vacío'
 							},
 							stringLength: {
-								min: 2,
+								min: 4,
 								max: 45,
-								message: 'La clave debe ser mayor de 2 y menos de 45 caracteres de largo'
+								message: 'La clave debe ser mayor de 4 y menos de 45 caracteres de largo'
 							},
 							regexp: {
 								regexp: /^[a-zA-Z0-9, ,_]*$/,
@@ -525,8 +521,8 @@ $(document).ready(function() {
 							},
 							stringLength: {
 								min: 1,
-								max: 9,
-								message: 'El idpais debe ser mayor de 1 y menos de 9 caracteres de largo'
+								max: 1,
+								message: 'El idpais debe ser mayor de 1 y menos de 1 caracteres de largo'
 							},
 							regexp: {
 								regexp: /^[0-9]*$/,
@@ -545,10 +541,6 @@ $(document).ready(function() {
 								max: 45,
 								message: 'El escudo debe ser mayor de 2 y menos de 45 caracteres de largo'
 							},
-							regexp: {
-								regexp: /^[a-zA-Z0-9]*$/,
-								message: 'El escudo sólo puede consistir en alfabético, número y subrayado'
-							}
 						}
 					},
 				}

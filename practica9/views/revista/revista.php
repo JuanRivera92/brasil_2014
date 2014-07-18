@@ -9,15 +9,9 @@
     include ('../../libs/Er.php');
 	include ('../layouts/header.php');
 	
-	echo "<pre>datos";
-		print_r($_POST);
-		print_r($_FILES);
-	echo "</pre>";
-	
-	
-	if(isset($_POST['nombre'])){
-		//$revistaC = new RevistaController();
-		//$revistaC->insertaRevista($_POST, $_FILES);
+	if(isset($_POST['nombre'])&['portada']){
+		$revistaC = new RevistaController();
+		$revistaC->insertaRevista($_POST, $_FILES);
 	}
 ?>	
 	
@@ -32,13 +26,9 @@
 					<label for="portada">Portada: </label>
 					<input type="file" id="portada" name="portada"/>
 				</div>
-				<div id="datetimepicker2" class="input-append">
-					<label for="fecha_creacion">Fecha:</label>
-					<input id="fecha_creacion" name="fecha_creacion" class="form-control" data-format="dd-MM-yyyy" type="date"></input>
-					<span class="add-on">
-					  <i data-time-icon="icon-time" data-date-icon="icon-calendar">
-					  </i>
-					</span>
+				<div>
+					<label for="fecha">Fecha:</label>
+					<input id="fecha" name="fecha" type="date" class="form-control" data-format="dd-MM-yyyy"></input>
 				</div>
 				<div class="form-group">
 					<label for="volumen">Volumen:</label>

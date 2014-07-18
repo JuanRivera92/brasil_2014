@@ -7,7 +7,7 @@ class Pais extends Modelo{
     
     public $atributos = array(
         'nombre'=>array(),
-        'portada'=>array(),
+        'bandera'=>array(),
 		'idcontinente'=>array(),
 
     );
@@ -15,7 +15,7 @@ class Pais extends Modelo{
     public $errores = array( );
     
     private $nombre;
-    private $portada;
+    private $bandera;
 	private $idcontinente;
 
     function Pais(){
@@ -54,10 +54,10 @@ class Pais extends Modelo{
     public function set_bandera($valor){
         $er = new Er();
         
-        if ( !$er->valida_bandera($valor) ){
+        if ( !$er->valida_bandera($valor['name']) ){
             $this->errores[] = "Este bandera (".$valor.") no es valido";
         }
-            $this->bandera = trim($valor);
+            $this->bandera = trim($valor['name']);
         }//Fin de bandera
 		
 		//Inicio de idcontinente  

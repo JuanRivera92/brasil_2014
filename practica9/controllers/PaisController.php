@@ -6,19 +6,22 @@
 			// parent::Pais();
 		}
 		
-		public function insertaPais($datos){
+		public function insertaPais($datos, $archivos){
 			echo "<pre>datos: ";
 			print_r($datos);
+			print_r($archivos);
 			echo "</pre>";
 			$pais = new Pais();
 			$pais->set_nombre($datos['nombre']);
-			$pais->set_bandera($datos['bandera']);
+			$pais->set_bandera($archivos['name']);
 			$pais->set_idcontinente($datos['idcontinente']);
 			
 			if(count($pais->errores)>0){
 				print_r($pais->errores);
-				
 			}
+			// else{
+				// move_uploaded_file($archivos['portada']['tmp_name'],"../img/".$archivos['portada']['name']);
+			// }
 			$pais->inserta($pais->get_atributos());
 			die();
 		}

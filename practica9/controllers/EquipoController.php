@@ -6,19 +6,25 @@
 			// parent::Equipo();
 		}
 		
-		public function insertaEquipo($datos){
+		public function insertaEquipo($datos, $archivos){
 			echo "<pre>datos: ";
 			print_r($datos);
+			print_r($archivos);
 			echo "</pre>";
+			
 			$equipo = new Equipo();
+			
 			$equipo->set_nombre($datos['nombre']);
 			$equipo->set_idpais($datos['idpais']);
-			$equipo->set_escudo($datos['escudo']);
+			$equipo->set_escudo($archivos['name']);
 			
 			if(count($equipo->errores)>0){
 				print_r($equipo->errores);
 				
 			}
+			// else{
+				// move_uploaded_file($archivos['portada']['tmp_name'],"../img/".$archivos['portada']['name']);
+			// }
 			$equipo->inserta($equipo->get_atributos());
 			die();
 		}

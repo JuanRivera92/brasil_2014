@@ -16,7 +16,7 @@
 			
 			$revista->set_nombre($datos['nombre']);
 			$revista->set_portada($archivos['portada']);
-			$revista->set_fecha_creacion($datos['fecha_creacion']);
+			$revista->set_fecha($datos['fecha']);
 			$revista->set_volumen($datos['volumen']);
 			$revista->set_titulo($datos['titulo']);
 			$revista->set_subtitulo($datos['subtitulo']);
@@ -27,18 +27,14 @@
 			
 			if(count($revista->errores)>0){
 				print_r($revista->errores);
-				$revista->inserta($revista->get_atributos());
+				
 			}
-			else{
-				move_uploaded_file($archivos['portada']['tmp_name'],"../img/".$archivos['portada']['name']);
-			}
-			
-			//$revista->inserta($revista->get_atributos());
+			// else{
+				// move_uploaded_file($archivos['portada']['tmp_name'],"../img/".$archivos['portada']['name']);
+			// }
+			$revista->inserta($revista->get_atributos());
 			die();
 		}
-		
-		
-		
 		
 		public function validaUsuario($datos){
 			$rs = $this->consulta_sql(" select * from usuarios where email = '".$datos['email']."'  ");

@@ -45,16 +45,19 @@ class Er {
 	//portada
 	public function valida_portada($valor){
 	$exp_reg = '/^[a-zA-Z0-9]*$/';
-	if (preg_match($exp_reg, $valor)) {
+	if (preg_match($exp_reg, $valor['name'])) {
 		     return true;
 		} else { 
 		     return false;
 		} 
 	}
 	
-	//fecha ($fecha="2/03/2011";)
+		//fecha ($fecha="2/03/2011";)
 	public function valida_fecha($valor){
-	$exp_reg = '/^[a-zA-Z0-9]*$/';
+	$patron = "/-/";
+	$remplazo = "/";
+	$exp_reg = '/^\d{4}\/\d{1,2}\/\d{1,2}$/';
+	$valor = preg_replace ($patron, $remplazo, $valor);
 	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 
