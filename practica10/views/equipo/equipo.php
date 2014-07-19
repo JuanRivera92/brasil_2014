@@ -1,5 +1,5 @@
 <?php 
-    session_start();
+	include ('../../libs/security.php');
     include ('../../libs/adodb5/adodb-pager.inc.php');
     include ('../../libs/adodb5/adodb.inc.php');
     include ('../../models/Conexion.php');
@@ -19,8 +19,7 @@
 ?>	
 
 <div class=row>
-	<div class="col-md-6" id="Formularioequipo">
-	
+		<div class="col-md-6" id="Formularioequipo">
 			<form role="form" id="equipo" action="" method="POST" enctype="multipart/form-data">
 				<div class="form-group">
 					<label for="nombre">Nombre: </label>
@@ -28,7 +27,7 @@
 				</div>
 				<div class="form-group">
 					<label for="idpais">Id Pais: </label>
-					<input type="texy" class="form-control" id="idpais" name="idpais">
+					<?php echo $equipoC->getDropDown ('pais', 'idpais','idpais'); ?>
 				</div>
 				<div class="form-group">
 					<label for="escudo">Escudo: </label>
@@ -36,6 +35,10 @@
 				</div>
 				<button type="submit" class="btn btn-primary">Guardar</button>
 			</form>
-	</div>
+		</div>
+		<div class="col-md-6">
+			<h2 class="text-center">Lista equipos</h2>
+			<?php $equipoC->show_grid(); ?>
+		</div>
 </div>
 <?php include ('../layouts/footer.php'); ?>

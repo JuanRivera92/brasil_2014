@@ -1,6 +1,5 @@
-<?php session_start();
-      
-      include ('../../libs/adodb5/adodb-pager.inc.php');
+<?php 
+	  session_start();//SOLO PARA LOGIN
       include ('../../libs/adodb5/adodb.inc.php');
       include ('../../models/Conexion.php');
       include ('../../models/Modelo.php');

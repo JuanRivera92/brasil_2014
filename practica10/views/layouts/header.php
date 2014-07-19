@@ -7,19 +7,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
-	<script src="../js/jquery.min.js"></script>
-	<script src="../js/bootstrap.js"></script>	
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Clase programación web verano</title>
 	
-	<!-- Librerias -->
-	
-			<!-- Bootstrap -->
+				<!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/bootstrap.css"/>
     <link rel="stylesheet" href="../css/bootstrapValidator.min.css"/>
 	<link href="../css/micss.css" rel="stylesheet">	
+	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Clase programación web verano</title>
+	
+	<!-- Librerias -->
+
 			
 			<!-- Fancybox -->
 	<link rel="stylesheet" type="text/css" href="../css/jquery.fancybox.css?v=2.1.5" media="screen" />
@@ -54,19 +55,55 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="<?php echo BASEURL; ?>/views/autor/autor.php">Autor</a></li>
-			<li><a href="<?php echo BASEURL; ?>/views/revista/revista.php">Revista</a></li>
-			<li><a href="<?php echo BASEURL; ?>/views/articulo/articulo.php">Articulo</a></li>
-			<li><a href="<?php echo BASEURL; ?>/views/status/status.php">Status</a></li>
-			<li><a href="<?php echo BASEURL; ?>/views/pais/pais.php">Pais</a></li>
-			<li><a href="<?php echo BASEURL; ?>/views/equipo/equipo.php">Equipo</a></li>
-			<li><a href="<?php echo BASEURL; ?>/views/integrante/integrante.php">Integrante</a></li>
+			        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
           </ul>
-
+        </li>
+			<!-- <li><a href="<?php echo BASEURL; ?>/views/site/inicio2.php">Inicio</a></li>-->
+            <!-- <li><a href="<?php echo BASEURL; ?>/views/autor/autor.php">Autor</a></li>-->
+			<!-- <li><a href="<?php echo BASEURL; ?>/views/revista/revista.php">Revista</a></li>-->
+			<!-- <li><a href="<?php echo BASEURL; ?>/views/articulo/articulo.php">Articulo</a></li>-->
+			<!-- <li><a href="<?php echo BASEURL; ?>/views/status/status.php">Status</a></li>-->
+			<!-- <li><a href="<?php echo BASEURL; ?>/views/pais/pais.php">Pais</a></li>-->
+			<!-- <li><a href="<?php echo BASEURL; ?>/views/equipo/equipo.php">Equipo</a></li>-->
+			<!-- <li><a href="<?php echo BASEURL; ?>/views/integrante/integrante.php">Integrante</a></li>-->
+			  <li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">opciones...  <b class="caret"></b></a>
+				  <ul class="dropdown-menu">
+					  <li><a href="<?php echo BASEURL; ?>/views/autor/autor.php">Autor</a></li>
+						 <li class="divider"></li>
+					  <li><a href="<?php echo BASEURL; ?>/views/revista/revista.php">Revista</a></li>
+						<li class="divider"></li>
+					  <li><a href="<?php echo BASEURL; ?>/views/articulo/articulo.php">Articulo</a></li>
+						<li class="divider"></li>
+					  <li><a href="<?php echo BASEURL; ?>/views/status/status.php">Status</a></li>
+						<li class="divider"></li>
+					   <li><a href="<?php echo BASEURL; ?>/views/pais/pais.php">Pais</a></li>
+						<li class="divider"></li>
+					  <li><a href="<?php echo BASEURL; ?>/views/equipo/equipo.php">Equipo</a></li>
+						
+					 </ul>
+				</li>
+		  </ul>
+			
           <ul class="nav navbar-nav navbar-right">
+			<?php if(!isset($_SESSION['user'])){?>
             <li><a href="<?php echo BASEURL; ?>/views/site/login.php">
               <span class="glyphicon glyphicon-log-in"></span> Login</a>
             </li>
+			<?php }else {?>
+			<li><a href="<?php echo BASEURL; ?>/views/site/logout.php">
+              <span class="glyphicon glyphicon-log-in"></span> Logout</a>
+            </li>
+			<?php } ?>
           </ul>
           
 

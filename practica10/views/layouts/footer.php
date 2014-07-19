@@ -6,6 +6,11 @@
 	 		<p class="text-center">
 	 			
 	 			Clase programación web. <br><span class="glyphicon glyphicon-registration-mark"> </span> <?php echo date('Y'); ?>
+				<pre>
+					<?php
+						print_r($_SESSION);
+					?>
+				</pre>
 	 			
 	 		</p>
 	 	</div>	
@@ -37,6 +42,7 @@
 		<script type="text/javascript" src="../js/jquery.fancybox-thumbs.js?v=1.0.7"></script>
 		<script type="text/javascript" src="../js/jquery.fancybox-media.js?v=1.0.6"></script>
 		<script src="../js/main.js"></script>
+
 	<!-- Fin de Librerias -->
 	
 	
