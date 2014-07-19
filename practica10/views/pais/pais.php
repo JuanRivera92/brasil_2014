@@ -9,18 +9,37 @@
     include ('../../libs/Er.php');
 	include ('../layouts/header.php');
 	
+	$paisC = new PaisController();
 	if(isset($_POST['nombre'])){
-		$paisC = new PaisController();
 		$paisC->insertaPais($_POST, $_FILES);
 	}
 ?>	
 
 <div class=row>
 	<div class="col-md-6" id="Formulariopais">
-		<form role="form" id="pais" action="" method="POST" enctype="multipart/form-data">
+	
+		<!-- CONVERTIR EN FUNCION Y HUBICARLO EN UNA CLASE -->
+		<?php
+		 if($paisC->muestra_errores){
+		 ?>
+		 	<div class="alert alert-danger">
+				<?php
+					foreach ($paisC->errores as $value) {
+						echo "<p>$value</p>";
+					}
+				?>
+			</div>
+		 <?php
+			}
+		?>
+		<!-- CONVERTIR EN FUNCION Y HUBICARLO EN UNA CLASE -->
+		
+	
+	
+			<form role="form" id="pais" action="" method="POST" enctype="multipart/form-data">
 			<div class="form-group">
 				<label for="nombre">Nombre: </label>
-				<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Por ejemplo: M&eacute;xico">
+				<input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo $paisC->get_nombre();?>">
 			</div>
 			<div class="form-group">
 				<label for="bandera">Bandera: </label>

@@ -14,7 +14,7 @@ class Er {
 	
 	//nombre
 	public function valida_nombre($valor){
-	$exp_reg = '/^[a-zA-Z]*$/';
+	$exp_reg = '/^[a-zA-Z, ,_]*$/';
 	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 
@@ -55,7 +55,7 @@ class Er {
 	//portada
 	public function valida_portada($valor){
 	$exp_reg = '/^[a-zA-Z0-9]*$/';
-	if (preg_match($exp_reg, $valor['name'])) {
+	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 
 		     return false;
@@ -148,7 +148,7 @@ class Er {
 		
 	//resumen
 	public function valida_resumen($valor){
-	$exp_reg = '/^[a-zA-Z0-9, ]*$/';
+	$exp_reg = '/^[a-zA-Z, ,_,.]*$/';
 	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 
@@ -158,7 +158,7 @@ class Er {
 	
 	//introduccion
 	public function valida_introduccion($valor){
-	$exp_reg = '/^[a-zA-Z0-9, ]*$/';
+	$exp_reg = '/^[a-zA-Z, ,_,.]*$/';
 	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 
@@ -168,7 +168,7 @@ class Er {
 	
 	//metodologia
 	public function valida_metodologia($valor){
-	$exp_reg = '/^[a-zA-Z0-9, ]*$/';
+	$exp_reg = '/^[a-zA-Z, ,_,.]*$/';
 	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 
@@ -201,8 +201,8 @@ class Er {
 	
 	//Archivo PDF
 	public function valida_archivo_pdf($valor){
-	$exp_reg = '/^[a-zA-Z0-9, ]*$/';
-	if (preg_match($exp_reg, $valor['name'])) {
+	$exp_reg = '/^[a-zA-Z0-9, ,_,.]*$/';
+	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 
 		     return false;
@@ -211,7 +211,7 @@ class Er {
 	
 	//conclusiones
 	public function valida_conclusiones($valor){
-	$exp_reg = '/^[a-zA-Z0-9, ]*$/';
+	$exp_reg = '/^[a-zA-Z, ,_,.]*$/';
 	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 
@@ -221,7 +221,7 @@ class Er {
 	
 	//agradecimiento
 	public function valida_agradecimientos($valor){
-	$exp_reg = '/^[a-zA-Z0-9, ]*$/';
+	$exp_reg = '/^[a-zA-Z, ,_,.]*$/';
 	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 
@@ -231,7 +231,7 @@ class Er {
 	
 	//referencias
 	public function valida_referencias($valor){
-	$exp_reg = '/^[a-zA-Z0-9, ]*$/';
+	$exp_reg = '/^[a-zA-Z, ,_,.]*$/';
 	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 
@@ -292,7 +292,7 @@ class Er {
 	//bandera
 	public function valida_bandera($valor){
 	$exp_reg = '/^[a-zA-Z0-9, ,_]*$/';
-	if (preg_match($exp_reg, $valor['name'])) {
+	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 
 		     return false;
@@ -301,7 +301,7 @@ class Er {
 	
 	//idcontinente
 	public function valida_idcontinente($valor){
-	$exp_reg = '/^[1-2]*$/';
+	$exp_reg = '/^[1-5]*$/';
 	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 
@@ -321,7 +321,7 @@ class Er {
 	
 	//escudo
 	public function valida_escudo($valor){
-	$exp_reg = '/^[a-zA-Z0-9, ,_]*$/';
+	$exp_reg = '/^[a-zA-Z0-9, ,_,.]*$/';
 	if (preg_match($exp_reg, $valor)) {
 		     return true;
 		} else { 

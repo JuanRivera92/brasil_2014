@@ -462,7 +462,7 @@ $(document).ready(function() {
 								message: 'El status de la revista debe ser mayor de 2 y menos de 100 caracteres de largo'
 							},
 							regexp: {
-								regexp: /^[a-zA-Z]*$/,
+								regexp: /^[a-zA-Z0-9, ,_]*$/,
 								message: 'El nombre de usuario sólo puede consistir en alfabético, número y subrayado'
 							}
 						}
@@ -475,11 +475,11 @@ $(document).ready(function() {
 							},
 							stringLength: {
 								min: 1,
-								max: 2,
+								max: 5,
 								message: 'El status de la revista debe ser mayor de 1 y menos de 2 caracteres de largo'
 							},
 							regexp: {
-								regexp: /^[0-2]*$/,
+								regexp: /^[0-5]*$/,
 								message: 'El nombre de usuario sólo puede consistir en número'
 							}
 						}
@@ -508,7 +508,7 @@ $(document).ready(function() {
 								message: 'El status de la revista debe ser mayor de 2 y menos de 48 caracteres de largo'
 							},
 							regexp: {
-								regexp: /^[a-zA-Z0-9]*$/,
+								regexp: /^[a-zA-Z0-9, ,_]*$/,
 								message: 'El nombre de usuario sólo puede consistir en alfabético, número y subrayado'
 							}
 						}

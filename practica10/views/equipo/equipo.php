@@ -8,6 +8,9 @@
     include ('../../controllers/EquipoController.php');
     include ('../../libs/Er.php');
 	include ('../layouts/header.php');
+	include ('../../libs/Fun.php');
+	
+	$funciones = new FunErrores();
 	
 	$equipoC = new EquipoController();
 	if(isset($_POST['nombre'])){
@@ -18,22 +21,6 @@
 <div class=row>
 	<div class="col-md-6" id="Formularioequipo">
 	
-		<!-- CONVERTIR EN FUNCION Y HUBICARLO EN UNA CLASE -->
-		<?php
-		 if($equipoC->muestra_errores){
-		 ?>
-		 	<div class="alert alert-danger">
-				<?php
-					foreach ($equipoC->errores as $value) {
-						echo "<p>$value</p>";
-					}
-				?>
-			</div>
-		 <?php
-			}
-		?>
-		<!-- CONVERTIR EN FUNCION Y HUBICARLO EN UNA CLASE -->
-
 			<form role="form" id="equipo" action="" method="POST" enctype="multipart/form-data">
 				<div class="form-group">
 					<label for="nombre">Nombre: </label>

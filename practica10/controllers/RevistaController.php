@@ -3,35 +3,33 @@
 		
 		public $muestra_errores = false;
 		function __construct(){
-			// parent::Revista();
+			parent::Revista();
 		}
 				
 		public function insertaRevista($datos, $archivos){
-			echo "<pre>datos: ";
-			print_r($datos);
-			print_r($archivos);
-			echo "</pre>";
+
+			// $revista = new Revista();
+
+			$this->set_nombre($datos['nombre']);
+			$this->set_portada($archivos['portada']);
+			$this->set_fecha($datos['fecha']);
+			$this->set_volumen($datos['volumen']);
+			$this->set_titulo($datos['titulo']);
+			$this->set_subtitulo($datos['subtitulo']);
+			$this->set_numero($datos['numero']);
+			$this->set_clave($datos['clave']);
+			$this->set_directorio($datos['directorio']);
+			$this->set_editorial($datos['editorial']);
 			
-			$revista = new Revista();
-			
-			$revista->set_nombre($datos['nombre']);
-			$revista->set_portada($archivos['portada']);
-			$revista->set_fecha($datos['fecha']);
-			$revista->set_volumen($datos['volumen']);
-			$revista->set_titulo($datos['titulo']);
-			$revista->set_subtitulo($datos['subtitulo']);
-			$revista->set_numero($datos['numero']);
-			$revista->set_clave($datos['clave']);
-			$revista->set_directorio($datos['directorio']);
-			$revista->set_editorial($datos['editorial']);
-			
-			if(count($revista->errores)>0){
-				print_r($revista->errores);
+			if(count($this->errores)>0){
+				//print_r($this->errores);
+				$this->muestra_errores = true;
 				
 			}
+			else{
+			$this->inserta($this->get_atributos());
 			move_uploaded_file($archivos['portada']['tmp_name'],"../img/".$archivos['portada']['name']);
-			$revista->inserta($revista->get_atributos());
-			die();
+			}
 		}
 		
 		public function validaUsuario($datos){

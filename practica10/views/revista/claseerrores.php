@@ -1,0 +1,1 @@
+<?phpclass Errores {	function error($revistaC){		 if($revistaC->muestra_errores){		 ?>		 	<div class="alert alert-danger">				<?php					foreach ($revistaC->errores as $value) {						echo "<p>$value</p>";					}				?>			</div>		 <?php			}			else{			echo "no entra en el if";}	}}//FIN CLASE ERRORES?>

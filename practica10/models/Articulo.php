@@ -146,7 +146,7 @@ class Articulo extends Modelo{
             $this->fecha_creacion = trim($valor);
         }//Fin de fecha_creacion
 		
-	//Inicio archivo_pdf
+	//Inicio de pdf  
     public function get_archivo_pdf(){
         return $this->archivo_pdf;
     }
@@ -155,10 +155,10 @@ class Articulo extends Modelo{
         $er = new Er();
         
         if ( !$er->valida_archivo_pdf($valor['name']) ){
-            $this->errores[] = "Este archivo PDF (".$valor.") no es valido";
+            $this->errores[] = "Este pdf (".$valor['name'].") no es valido";
         }
             $this->archivo_pdf = trim($valor['name']);
-        }//Fin de archivo_pdf
+        }//Fin de pdf
 		
 	//Inicio id_status
     public function get_id_status(){

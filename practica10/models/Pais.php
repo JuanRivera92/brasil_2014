@@ -55,7 +55,7 @@ class Pais extends Modelo{
         $er = new Er();
         
         if ( !$er->valida_bandera($valor['name']) ){
-            $this->errores[] = "Este bandera (".$valor.") no es valido";
+            $this->errores[] = "Este bandera (".$valor['name'].") no es valido";
         }
             $this->bandera = trim($valor['name']);
         }//Fin de bandera

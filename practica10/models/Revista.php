@@ -70,7 +70,7 @@ class Revista extends Modelo{
         $er = new Er();
         
         if ( !$er->valida_portada($valor['name']) ){
-            $this->errores[] = "Esta portada (".$valor.") no es valido";
+            $this->errores[] = "Esta portada (".$valor['name'].") no es valido";
         }
             $this->portada = trim($valor['name']);
         }//Fin de portada

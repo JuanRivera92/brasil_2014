@@ -7,36 +7,40 @@
     include ('../../models/Articulo.php');
     include ('../../controllers/ArticuloController.php');
     include ('../../libs/Er.php');
+	include ('../../libs/Fun.php');
+	
 	include ('../layouts/header.php');
 	
+	$funciones = new FunErrores();
+	
+	$articuloC = new ArticuloController();
 	if(isset($_POST['nombre'])){
-		$articuloC = new ArticuloController();
 		$articuloC->insertaArticulo($_POST, $_FILES);
 	}
 ?>	
-	
 	<div class="row">
 		<div class="col-md-6" id="Formularioarticulo">
+		
 			<form role="form" id="autor" action="" method="POST" enctype="multipart/form-data">
 				<div class="form-group">
 					<label for="nombre">Nombre: </label>
-					<input style="background-color:transparent; " type="text" class="form-control" id="nombre" name="nombre" />
+					<input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo $articuloC->get_nombre();?>" />
 				</div>
 				<div class="form-group">
 					<label for="resumen">Resumen: </label>
-					<textarea type="text" class="form-control" id="resumen" name="resumen"></textarea>
+					<input type="text" class="form-control" id="resumen" name="resumen" value="<?php echo $articuloC->get_resumen();?>"/>
 				</div>
 				<div class="form-group">
 					<label for="introduccion">Introduccion:</label>
-					<textarea type="text" class="form-control" id="introduccion" name="introduccion"></textarea>
+					<input type="text" class="form-control" id="introduccion" name="introduccion" value="<?php echo $articuloC->get_introduccion();?>"/>
 				</div>
 				<div class="form-group">
 					<label for="metodologia">Metodologia:</label>
-					<textarea type="text" class="form-control" id="metodologia" name="metodologia"></textarea>
+					<input type="text" class="form-control" id="metodologia" name="metodologia" value="<?php echo $articuloC->get_metodologia();?>"/>
 				</div>
 				<div class="form-group">
 					<label for="contenido">Contenido:</label>
-					<textarea type="text" class="form-control" id="contenido" name="contenido"></textarea>
+					<input type="text" class="form-control" id="contenido" name="contenido" value="<?php echo $articuloC->get_contenido();?>"/>
 				</div>
 				<div>
 					<label for="fecha_creacion">Fecha:</label>
@@ -52,15 +56,15 @@
 				</div>
 				<div class="form-group">
 					<label for="conclusiones">Conclusiones:</label>
-					<textarea type="text" class="form-control" id="conclusiones" name="conclusiones"></textarea>
+					<input type="text" class="form-control" id="conclusiones" name="conclusiones" value="<?php echo $articuloC->get_conclusiones();?>"/>
 				</div>
 				<div class="form-group">
 					<label for="agradecimientos">Agradecimientos:</label>
-					<textarea type="text" class="form-control" id="agradecimientos" name="agradecimientos"></textarea>
+					<input type="text" class="form-control" id="agradecimientos" name="agradecimientos" value="<?php echo $articuloC->get_agradecimientos();?>"/>
 				</div>
 				<div class="form-group">
 					<label for="referencias">Referencias:</label>
-					<textarea type="text" class="form-control" id="referencias" name="referencias"></textarea>
+					<input type="text" class="form-control" id="referencias" name="referencias" value="<?php echo $articuloC->get_referencias();?>"/>
 				</div>
 				<div class="form-group">
 					<button type="submit" class="btn btn-primary">Guardar</button>
